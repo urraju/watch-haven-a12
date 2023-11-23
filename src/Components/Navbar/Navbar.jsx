@@ -1,19 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
-import shop from "../../assets/icon/151-1511569_cart-notifications-free-shopping-cart-favicon-hd-png-removebg-preview.png";
-import useAuth from "../../useAuth/useAuth";
 import { FaCartArrowDown } from "react-icons/fa";
-import useCarts from "../../useAuth/useCarts";
-import useAdmin from "../../useAxiosSecure/useAdmin";
+import useAuth from "../../AuthContext/useAuth/useAuth";
+ 
+ 
 const Navbar = () => {
   const { user, singout } = useAuth();
-  const [cart] = useCarts()
-  const [isAdmin] = useAdmin()
+ 
+  
   const handleLogout = () => {
     singout().then().catch();
   };
   const navbarManu = (
     <>
-    {
+    {/* {
       user && isAdmin &&  <NavLink
       className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
       to="/dashboard/adminHome"
@@ -34,7 +33,7 @@ const Navbar = () => {
           <FaCartArrowDown className="text-xl"/>
           <div className="badge badge-secondary">+{cart.length}</div>
         </button>
-      </NavLink>
+      </NavLink> */}
 
       <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
@@ -107,7 +106,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal gap-5 uppercase px-1">
             {navbarManu}
           </ul>
-          <img className="w-10" src={shop} alt="" />
+          {/* <img className="w-10" src={} alt="" /> */}
           {user?.email ? (
             <a onClick={handleLogout} className=" cursor-pointer uppercase text-yellow-500">
               Logout
