@@ -5,7 +5,7 @@ const Root = () => {
     return(
         <div>
             <Navbar/>
-              <Outlet/>
+             <Outlet/>
         </div>
     )}
 export default Root;
