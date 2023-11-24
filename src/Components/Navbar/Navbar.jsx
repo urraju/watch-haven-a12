@@ -52,7 +52,7 @@ const Navbar = () => {
       </NavLink> */}
       <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        to="/ourmenu"
+        to="/products"
       >
         Products
       </NavLink>
