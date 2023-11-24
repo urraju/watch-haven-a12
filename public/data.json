@@ -1,365 +1,632 @@
 [
     {
+      "_id": "6560fc1e90d650e57ad2abf6",
       "product_name": "Elegance Classic",
       "product_image": "https://i.ibb.co/phR0rNF/watch20.png",
-      "tags": ["classic", "elegance", "leather", "gold"],
+      "tags": [
+        "classic",
+        "elegance",
+        "leather",
+        "gold"
+      ],
+      "vote" : 0,
       "owner_email": "owner1@example.com",
       "date": "2023-11-01",
       "status": "accepted",
       "description": "A classic and elegant timepiece with a gold finish and leather strap.",
-      "external_links": ["https://example.com/elegance-classic"],
+      "external_links": [
+        "https://example.com/elegance-classic"
+      ],
       "product_id": "watch001",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2abf7",
       "product_name": "Sporty Adventure",
-      "product_image": "https://i.ibb.co/cvfgt0B/watch19.png",
-      "tags": ["sporty", "adventure", "chronograph", "black"],
+      "product_image": "https://i.ibb.co/zbmQ2sg/watch26.png",
+      "tags": [
+        "sporty",
+        "adventure",
+        "chronograph",
+        "black"
+      ],
+      "vote" : 0,
       "owner_email": "owner2@example.com",
       "date": "2023-11-02",
       "status": "accepted",
       "description": "A sporty chronograph watch designed for adventurous souls.",
-      "external_links": ["https://example.com/sporty-adventure"],
+      "external_links": [
+        "https://example.com/sporty-adventure"
+      ],
       "product_id": "watch002",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2abf8",
       "product_name": "Modern Minimalist",
       "product_image": "https://i.ibb.co/NsczBy9/watch11.png",
-      "tags": ["modern", "minimalist", "silver", "mesh"],
+      "tags": [
+        "modern",
+        "minimalist",
+        "silver",
+        "mesh"
+      ],
+      "vote" : 0,
       "owner_email": "owner3@example.com",
       "date": "2023-11-03",
       "status": "accepted",
       "description": "A sleek and modern watch with a minimalist design and silver mesh strap.",
-      "external_links": ["https://example.com/modern-minimalist"],
+      "external_links": [
+        "https://example.com/modern-minimalist"
+      ],
       "product_id": "watch003",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2abf9",
       "product_name": "Classic Rose Gold",
       "product_image": "https://i.ibb.co/Q98tKtG/watch10.png",
-      "tags": ["classic", "rose gold", "leather", "timeless"],
+      "tags": [
+        "classic",
+        "rose gold",
+        "leather",
+        "timeless"
+      ],
+      "vote" : 0,
       "owner_email": "owner4@example.com",
       "date": "2023-11-04",
       "status": "accepted",
       "description": "A timeless classic with a rose gold finish and genuine leather strap.",
-      "external_links": ["https://example.com/classic-rose-gold"],
+      "external_links": [
+        "https://example.com/classic-rose-gold"
+      ],
       "product_id": "watch004",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2abfa",
       "product_name": "Chrono Master",
       "product_image": "https://i.ibb.co/QHFqfcq/watch9.png",
-      "tags": ["chrono", "master", "stainless steel", "black"],
+      "tags": [
+        "chrono",
+        "master",
+        "stainless steel",
+        "black"
+      ],
+      "vote" : 0,
       "owner_email": "owner5@example.com",
       "date": "2023-11-05",
       "status": "accepted",
       "description": "A masterful chronograph watch with a stainless steel case and black dial.",
-      "external_links": ["https://example.com/chrono-master"],
+      "external_links": [
+        "https://example.com/chrono-master"
+      ],
       "product_id": "watch005",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2abfb",
       "product_name": "Vintage Explorer",
       "product_image": "https://i.ibb.co/2S5bFWx/watch7.png",
-      "tags": ["vintage", "explorer", "brown leather", "timepiece"],
+      "tags": [
+        "vintage",
+        "explorer",
+        "brown leather",
+        "timepiece"
+      ],
+      "vote" : 0,
       "owner_email": "owner6@example.com",
       "date": "2023-11-06",
       "status": "accepted",
       "description": "A vintage-inspired watch for explorers, featuring a brown leather strap.",
-      "external_links": ["https://example.com/vintage-explorer"],
+      "external_links": [
+        "https://example.com/vintage-explorer"
+      ],
       "product_id": "watch006",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2abfc",
       "product_name": "Sleek Titanium",
       "product_image": "https://i.ibb.co/pQ39n6B/watch8.png",
-      "tags": ["sleek", "titanium", "blue", "modern"],
+      "tags": [
+        "sleek",
+        "titanium",
+        "blue",
+        "modern"
+      ],
+      "vote" : 0,
       "owner_email": "owner7@example.com",
       "date": "2023-11-07",
       "status": "accepted",
       "description": "A sleek titanium watch with a modern design and a touch of blue accents.",
-      "external_links": ["https://example.com/sleek-titanium"],
+      "external_links": [
+        "https://example.com/sleek-titanium"
+      ],
       "product_id": "watch007",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2abfd",
       "product_name": "Dapper Black",
       "product_image": "https://i.ibb.co/tmkL2B0/watch6.png",
-      "tags": ["dapper", "black", "leather", "stylish"],
+      "tags": [
+        "dapper",
+        "black",
+        "leather",
+        "stylish"
+      ],
+      "vote" : 0,
       "owner_email": "owner8@example.com",
       "date": "2023-11-08",
       "status": "accepted",
       "description": "A dapper black watch with a leather strap, perfect for any occasion.",
-      "external_links": ["https://example.com/dapper-black"],
+      "external_links": [
+        "https://example.com/dapper-black"
+      ],
       "product_id": "watch008",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2abfe",
       "product_name": "Golden Elegance",
       "product_image": "https://i.ibb.co/bRhsypS/watch5.png",
-      "tags": ["golden", "elegance", "mesh", "luxury"],
+      "tags": [
+        "golden",
+        "elegance",
+        "mesh",
+        "luxury"
+      ],
+      "vote" : 0,
       "owner_email": "owner9@example.com",
       "date": "2023-11-09",
       "status": "accepted",
       "description": "An elegant watch with a golden finish and a luxurious mesh strap.",
-      "external_links": ["https://example.com/golden-elegance"],
+      "external_links": [
+        "https://example.com/golden-elegance"
+      ],
       "product_id": "watch009",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2abff",
       "product_name": "Timeless Beauty",
       "product_image": "https://i.ibb.co/n1QwJxZ/watch4.png",
-      "tags": ["timeless", "beauty", "rose gold", "white"],
+      "tags": [
+        "timeless",
+        "beauty",
+        "rose gold",
+        "white"
+      ],
+      "vote" : 0,
       "owner_email": "owner10@example.com",
       "date": "2023-11-10",
       "status": "accepted",
       "description": "A timeless beauty with a rose gold case and a white dial.",
-      "external_links": ["https://example.com/timeless-beauty"],
+      "external_links": [
+        "https://example.com/timeless-beauty"
+      ],
       "product_id": "watch010",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac00",
       "product_name": "Sapphire Blue",
       "product_image": "https://i.ibb.co/TwgKzvN/watch3.png",
-      "tags": ["sapphire blue", "silver", "modern", "unique"],
+      "tags": [
+        "sapphire blue",
+        "silver",
+        "modern",
+        "unique"
+      ],
+      "vote" : 0,
       "owner_email": "owner11@example.com",
       "date": "2023-11-11",
       "status": "accepted",
       "description": "A unique and modern watch with a sapphire blue dial and silver details.",
-      "external_links": ["https://example.com/sapphire-blue"],
+      "external_links": [
+        "https://example.com/sapphire-blue"
+      ],
       "product_id": "watch011",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac01",
       "product_name": "Royal Black",
       "product_image": "https://i.ibb.co/b5v8Lm2/watch2.png",
-      "tags": ["royal", "black", "leather", "sophisticated"],
+      "tags": [
+        "royal",
+        "black",
+        "leather",
+        "sophisticated"
+      ],
+      "vote" : 0,
       "owner_email": "owner12@example.com",
       "date": "2023-11-12",
       "status": "accepted",
       "description": "A royal black watch with a sophisticated design and genuine leather strap.",
-      "external_links": ["https://example.com/royal-black"],
+      "external_links": [
+        "https://example.com/royal-black"
+      ],
       "product_id": "watch012",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac02",
       "product_name": "Ocean Blue",
-      "product_image": "https://i.ibb.co/0sFX8hg/watch1.png",
-      "tags": ["ocean blue", "silver", "diver", "sporty"],
+      "product_image": "https://i.ibb.co/n1Hbqjf/wacth13.png",
+      "tags": [
+        "ocean blue",
+        "silver",
+        "diver",
+        "sporty"
+      ],
+      "vote" : 0,
       "owner_email": "owner13@example.com",
       "date": "2023-11-13",
       "status": "accepted",
       "description": "An ocean blue diver's watch with a sporty and adventurous spirit.",
-      "external_links": ["https://example.com/ocean-blue"],
+      "external_links": [
+        "https://example.com/ocean-blue"
+      ],
       "product_id": "watch013",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac03",
       "product_name": "Regal Rose",
       "product_image": "https://i.ibb.co/VJmyKvB/watch18.png",
-      "tags": ["regal", "rose", "gold", "stylish"],
+      "tags": [
+        "regal",
+        "rose",
+        "gold",
+        "stylish"
+      ],
+      "vote" : 0,
       "owner_email": "owner14@example.com",
       "date": "2023-11-14",
       "status": "accepted",
       "description": "A regal rose gold watch with a stylish and sophisticated appearance.",
-      "external_links": ["https://example.com/regal-rose"],
+      "external_links": [
+        "https://example.com/regal-rose"
+      ],
       "product_id": "watch014",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac04",
       "product_name": "Stealthy Black",
       "product_image": "https://i.ibb.co/njsNk71/watch17.png",
-      "tags": ["stealthy", "black", "chronograph", "modern"],
+      "tags": [
+        "stealthy",
+        "black",
+        "chronograph",
+        "modern"
+      ],
+      "vote" : 0,
       "owner_email": "owner15@example.com",
       "date": "2023-11-15",
       "status": "accepted",
       "description": "A stealthy black chronograph watch with a modern and bold design.",
-      "external_links": ["https://example.com/stealthy-black"],
+      "external_links": [
+        "https://example.com/stealthy-black"
+      ],
       "product_id": "watch015",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac05",
       "product_name": "Time Traveler",
       "product_image": "https://i.ibb.co/jgpTL7F/watch16.webp",
-      "tags": ["time", "traveler", "silver", "unique"],
+      "tags": [
+        "time",
+        "traveler",
+        "silver",
+        "unique"
+      ],
+      "vote" : 0,
       "owner_email": "owner16@example.com",
       "date": "2023-11-16",
       "status": "accepted",
       "description": "A time traveler's watch with a silver finish and a unique design.",
-      "external_links": ["https://example.com/time-traveler"],
+      "external_links": [
+        "https://example.com/time-traveler"
+      ],
       "product_id": "watch016",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac06",
       "product_name": "Golden Mesh",
       "product_image": "https://i.ibb.co/Fzw1ZFW/wacth12.png",
-      "tags": ["golden", "mesh", "elegance", "luxury"],
+      "tags": [
+        "golden",
+        "mesh",
+        "elegance",
+        "luxury"
+      ],
+      "vote" : 0,
       "owner_email": "owner17@example.com",
       "date": "2023-11-17",
       "status": "accepted",
       "description": "A watch with a golden mesh strap, radiating elegance and luxury.",
-      "external_links": ["https://example.com/golden-mesh"],
+      "external_links": [
+        "https://example.com/golden-mesh"
+      ],
       "product_id": "watch017",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac07",
       "product_name": "Retro Vibes",
       "product_image": "https://i.ibb.co/LrzQVRB/wacth13.png",
-      "tags": ["retro", "vibes", "brown leather", "unique"],
+      "tags": [
+        "retro",
+        "vibes",
+        "brown leather",
+        "unique"
+      ],
+      "vote" : 0,
       "owner_email": "owner18@example.com",
       "date": "2023-11-18",
       "status": "accepted",
       "description": "A watch with retro vibes and a brown leather strap for a unique look.",
-      "external_links": ["https://example.com/retro-vibes"],
+      "external_links": [
+        "https://example.com/retro-vibes"
+      ],
       "product_id": "watch018",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac08",
       "product_name": "Infinite Black",
       "product_image": "https://i.ibb.co/kQYK8ws/watch14.png",
-      "tags": ["infinite", "black", "chronograph", "modern"],
+      "tags": [
+        "infinite",
+        "black",
+        "chronograph",
+        "modern"
+      ],
+      "vote" : 0,
       "owner_email": "owner19@example.com",
       "date": "2023-11-19",
       "status": "accepted",
       "description": "A black chronograph watch with a modern design, representing infinite style.",
-      "external_links": ["https://example.com/infinite-black"],
+      "external_links": [
+        "https://example.com/infinite-black"
+      ],
       "product_id": "watch019",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac09",
       "product_name": "Lunar Silver",
       "product_image": "https://i.ibb.co/BCFH3nx/watch15.webp",
-      "tags": ["lunar", "silver", "minimalist", "sophisticated"],
+      "tags": [
+        "lunar",
+        "silver",
+        "minimalist",
+        "sophisticated"
+      ],
+      "vote" : 0,
       "owner_email": "owner20@example.com",
       "date": "2023-11-20",
       "status": "accepted",
       "description": "A lunar-inspired watch with a silver finish and a minimalist, sophisticated design.",
-      "external_links": ["https://example.com/lunar-silver"],
+      "external_links": [
+        "https://example.com/lunar-silver"
+      ],
       "product_id": "watch020",
       "featured": false
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac0a",
       "product_name": "Urban Explorer",
       "product_image": "https://i.ibb.co/tCNq4Xq/watch29.png",
-      "tags": ["urban", "explorer", "blue", "stylish"],
+      "tags": [
+        "urban",
+        "explorer",
+        "blue",
+        "stylish"
+      ],
+      "vote" : 0,
       "owner_email": "owner21@example.com",
       "date": "2023-11-21",
       "status": "accepted",
       "description": "A watch designed for urban explorers, featuring a stylish blue dial.",
-      "external_links": ["https://example.com/urban-explorer"],
+      "external_links": [
+        "https://example.com/urban-explorer"
+      ],
       "product_id": "watch021",
       "featured": true
     },
     {
+      "_id": "6560fc1e90d650e57ad2ac0b",
       "product_name": "Crystal Clear",
       "product_image": "https://i.ibb.co/2ZhY4Yx/watch30.png",
-      "tags": ["crystal clear", "silver", "modern", "elegant"],
+      "tags": [
+        "crystal clear",
+        "silver",
+        "modern",
+        "elegant"
+      ],
+      "vote" : 0,
       "owner_email": "owner22@example.com",
       "date": "2023-11-22",
       "status": "accepted",
       "description": "A watch with crystal clear details, silver accents, and an elegant design.",
-      "external_links": ["https://example.com/crystal-clear"],
+      "external_links": [
+        "https://example.com/crystal-clear"
+      ],
       "product_id": "watch022",
       "featured": false
     },
-
     {
-        "product_name": "Elegance Classic",
-        "product_image": "https://i.ibb.co/phR0rNF/watch20.png",
-        "tags": ["classic", "elegance", "leather", "gold"],
-        "owner_email": "owner1@example.com",
-        "date": "2023-11-01",
-        "status": "accepted",
-        "description": "A classic and elegant timepiece with a gold finish and leather strap.",
-        "external_links": ["https://example.com/elegance-classic"],
-        "product_id": "watch0023",
-        "featured": true
-      },
-      {
-        "product_name": "Sporty Adventure",
-        "product_image": "https://i.ibb.co/cvfgt0B/watch19.png",
-        "tags": ["sporty", "adventure", "chronograph", "black"],
-        "owner_email": "owner2@example.com",
-        "date": "2023-11-02",
-        "status": "accepted",
-        "description": "A sporty chronograph watch designed for adventurous souls.",
-        "external_links": ["https://example.com/sporty-adventure"],
-        "product_id": "watch0024",
-        "featured": false
-      },
-      {
-        "product_name": "Modern Minimalist",
-        "product_image": "https://i.ibb.co/6ZncTWb/watch28.png",
-        "tags": ["modern", "minimalist", "silver", "mesh"],
-        "owner_email": "owner3@example.com",
-        "date": "2023-11-03",
-        "status": "accepted",
-        "description": "A sleek and modern watch with a minimalist design and silver mesh strap.",
-        "external_links": ["https://example.com/modern-minimalist"],
-        "product_id": "watch0025",
-        "featured": true
-      },
-      {
-        "product_name": "Classic Rose Gold",
-        "product_image": "https://i.ibb.co/rGh2jbp/watch25.webp",
-        "tags": ["classic", "rose gold", "leather", "timeless"],
-        "owner_email": "owner4@example.com",
-        "date": "2023-11-04",
-        "status": "accepted",
-        "description": "A timeless classic with a rose gold finish and genuine leather strap.",
-        "external_links": ["https://example.com/classic-rose-gold"],
-        "product_id": "watch0026",
-        "featured": false
-      },
-      {
-        "product_name": "Chrono Master",
-        "product_image": "https://i.ibb.co/7zVSYFS/watch24.webp",
-        "tags": ["chrono", "master", "stainless steel", "black"],
-        "owner_email": "owner5@example.com",
-        "date": "2023-11-05",
-        "status": "accepted",
-        "description": "A masterful chronograph watch with a stainless steel case and black dial.",
-        "external_links": ["https://example.com/chrono-master"],
-        "product_id": "watch0027",
-        "featured": true
-      },
-      {
-        "product_name": "Vintage Explorer",
-        "product_image": "https://i.ibb.co/hYhhVGb/watch23.webp",
-        "tags": ["vintage", "explorer", "brown leather", "timepiece"],
-        "owner_email": "owner6@example.com",
-        "date": "2023-11-06",
-        "status": "accepted",
-        "description": "A vintage-inspired watch for explorers, featuring a brown leather strap.",
-        "external_links": ["https://example.com/vintage-explorer"],
-        "product_id": "watch0028",
-        "featured": false
-      },
-      {
-        "product_name": "Sleek Titanium",
-        "product_image": "https://i.ibb.co/2cXz6w3/watch22.webp",
-        "tags": ["sleek", "titanium", "blue", "modern"],
-        "owner_email": "owner7@example.com",
-        "date": "2023-11-07",
-        "status": "accepted",
-        "description": "A sleek titanium watch with a modern design and a touch of blue accents.",
-        "external_links": ["https://example.com/sleek-titanium"],
-        "product_id": "watch0029",
-        "featured": true
-      },
-      {
-        "product_name": "Dapper Black",
-        "product_image": "https://i.ibb.co/cbt2fyr/watch21.png",
-        "tags": ["dapper", "black", "leather", "stylish"],
-        "owner_email": "owner8@example.com",
-        "date": "2023-11-08",
-        "status": "accepted",
-        "description": "A dapper black watch with a leather strap, perfect for any occasion.",
-        "external_links": ["https://example.com/dapper-black"],
-        "product_id": "watch0030",
-        "featured": false
-      }
-    
-]
-  
+      "_id": "6560fc1e90d650e57ad2ac0c",
+      "product_name": "Elegance Classic",
+      "product_image": "https://i.ibb.co/phR0rNF/watch20.png",
+      "tags": [
+        "classic",
+        "elegance",
+        "leather",
+        "gold"
+      ],
+      "vote" : 0,
+      "owner_email": "owner1@example.com",
+      "date": "2023-11-01",
+      "status": "accepted",
+      "description": "A classic and elegant timepiece with a gold finish and leather strap.",
+      "external_links": [
+        "https://example.com/elegance-classic"
+      ],
+      "product_id": "watch0023",
+      "featured": true
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac0d",
+      "product_name": "Sporty Adventure",
+      "product_image": "https://i.ibb.co/cvfgt0B/watch19.png",
+      "tags": [
+        "sporty",
+        "adventure",
+        "chronograph",
+        "black"
+      ],
+      "vote" : 0,
+      "owner_email": "owner2@example.com",
+      "date": "2023-11-02",
+      "status": "accepted",
+      "description": "A sporty chronograph watch designed for adventurous souls.",
+      "external_links": [
+        "https://example.com/sporty-adventure"
+      ],
+      "product_id": "watch0024",
+      "featured": false
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac0e",
+      "product_name": "Modern Minimalist",
+      "product_image": "https://i.ibb.co/6ZncTWb/watch28.png",
+      "tags": [
+        "modern",
+        "minimalist",
+        "silver",
+        "mesh"
+      ],
+      "vote" : 0,
+      "owner_email": "owner3@example.com",
+      "date": "2023-11-03",
+      "status": "accepted",
+      "description": "A sleek and modern watch with a minimalist design and silver mesh strap.",
+      "external_links": [
+        "https://example.com/modern-minimalist"
+      ],
+      "product_id": "watch0025",
+      "featured": true
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac0f",
+      "product_name": "Classic Rose Gold",
+      "product_image": "https://i.ibb.co/rGh2jbp/watch25.webp",
+      "tags": [
+        "classic",
+        "rose gold",
+        "leather",
+        "timeless"
+      ],
+      "vote" : 0,
+      "owner_email": "owner4@example.com",
+      "date": "2023-11-04",
+      "status": "accepted",
+      "description": "A timeless classic with a rose gold finish and genuine leather strap.",
+      "external_links": [
+        "https://example.com/classic-rose-gold"
+      ],
+      "product_id": "watch0026",
+      "featured": false
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac10",
+      "product_name": "Chrono Master",
+      "product_image": "https://i.ibb.co/7zVSYFS/watch24.webp",
+      "tags": [
+        "chrono",
+        "master",
+        "stainless steel",
+        "black"
+      ],
+      "vote" : 0,
+      "owner_email": "owner5@example.com",
+      "date": "2023-11-05",
+      "status": "accepted",
+      "description": "A masterful chronograph watch with a stainless steel case and black dial.",
+      "external_links": [
+        "https://example.com/chrono-master"
+      ],
+      "product_id": "watch0027",
+      "featured": true
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac11",
+      "product_name": "Vintage Explorer",
+      "product_image": "https://i.ibb.co/hYhhVGb/watch23.webp",
+      "tags": [
+        "vintage",
+        "explorer",
+        "brown leather",
+        "timepiece"
+      ],
+      "vote" : 0,
+      "owner_email": "owner6@example.com",
+      "date": "2023-11-06",
+      "status": "accepted",
+      "description": "A vintage-inspired watch for explorers, featuring a brown leather strap.",
+      "external_links": [
+        "https://example.com/vintage-explorer"
+      ],
+      "product_id": "watch0028",
+      "featured": false
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac12",
+      "product_name": "Sleek Titanium",
+      "product_image": "https://i.ibb.co/2cXz6w3/watch22.webp",
+      "tags": [
+        "sleek",
+        "titanium",
+        "blue",
+        "modern"
+      ],
+      "vote" : 0,
+      "owner_email": "owner7@example.com",
+      "date": "2023-11-07",
+      "status": "accepted",
+      "description": "A sleek titanium watch with a modern design and a touch of blue accents.",
+      "external_links": [
+        "https://example.com/sleek-titanium"
+      ],
+      "product_id": "watch0029",
+      "featured": true
+    },
+    {
+      "_id": "6560fc1e90d650e57ad2ac13",
+      "product_name": "Dapper Black",
+      "product_image": "https://i.ibb.co/cbt2fyr/watch21.png",
+      "tags": [
+        "dapper",
+        "black",
+        "leather",
+        "stylish"
+      ],
+      "vote" : 0,
+      "owner_email": "owner8@example.com",
+      "date": "2023-11-08",
+      "status": "accepted",
+      "description": "A dapper black watch with a leather strap, perfect for any occasion.",
+      "external_links": [
+        "https://example.com/dapper-black"
+      ],
+      "product_id": "watch0030",
+      "featured": false
+    }
+  ]

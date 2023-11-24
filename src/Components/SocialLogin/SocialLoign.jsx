@@ -2,12 +2,13 @@
 
 
 import { FaGoogle } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../AuthContext/useAuth/useAuth";
 
 const SocialLogin = () => {
     const {google} = useAuth()
-    const nagivate = useNavigate()
+    const navigate = useNavigate()
+    const location = useLocation()
     const handleGoogle = () => {
         google()
         .then(result => {
@@ -18,8 +19,7 @@ const SocialLogin = () => {
             }
             axiosPublic.post('/users', userInfo)
             .then(res => {
-                console.log(res.data);
-                nagivate('/')
+                navigate(location.state ? location.state : '/')
             })
         })
         
@@ -28,7 +28,7 @@ const SocialLogin = () => {
     return(
         <div>
              <div onClick={handleGoogle} className=" h-8 cursor-pointer w-8 p-2 rounded-full bg-gray-200">
-                <FaGoogle className="text-orange-600"/>
+                <FaGoogle className="text-yellow-500"/>
              </div>
         </div>
     )}

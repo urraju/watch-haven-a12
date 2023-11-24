@@ -7,7 +7,7 @@ import userIcon from '../../assets/user/user.png'
  
 const Navbar = () => {
   const { user, singout } = useAuth();
- 
+  console.log(user);
   
   const handleLogout = () => {
     singout().then().catch();
@@ -61,6 +61,12 @@ const Navbar = () => {
         to="/ourshop"
       >
         DashBoard
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
+        to="/login"
+      >
+        Login
       </NavLink>
     </>
   );
@@ -121,20 +127,7 @@ const Navbar = () => {
         
         
 
-         {user ? (
-           <button
-             onClick={handleLogout}
-             className="text-white font-philospar uppercase bg-yellow-500 text-[12px] md:py-1 md:text-[16px] px-4  rounded py-[3px]"
-           >
-             Sing out
-           </button>
-         ) : (
-           <Link to="/login">
-             <button className="text-white md:py-1 text-[13px] uppercase font-philospar bg-yellow-500 px-5 md:text-[16px] rounded py-[3px]">
-               Login
-             </button>
-           </Link>
-         )}
+        
 
 <div className="dropdown dropdown-end">
            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -149,6 +142,17 @@ const Navbar = () => {
            >
              <li>{user ? user.displayName : ""}</li>
              <li>{user ? user.email : ""}</li>
+
+             {user ? (
+           <button
+             onClick={handleLogout}
+             className="text-white font-philospar uppercase bg-yellow-500 text-[12px] md:py-1 md:text-[16px] px-4  rounded py-[3px]"
+           >
+             Sing out
+           </button>
+         ) : (
+           ''
+         )}
            </ul>
          </div>
          <div>

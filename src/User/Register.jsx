@@ -11,7 +11,7 @@ const Register = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const {registation} = useAuth()
-  
+  const axiosPublic = useAxiosPublic()
   const {
     register,
     handleSubmit,
@@ -25,7 +25,7 @@ const Register = () => {
         name : data.name,
         email : data.email
       }
-      useAxiosPublic.post('/users', userInfo)
+      axiosPublic.post('/users', userInfo)
       .then(res => {
         console.log(res.data);
         
