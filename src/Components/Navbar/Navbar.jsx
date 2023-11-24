@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import useAuth from "../../AuthContext/useAuth/useAuth";
-import logo from '../../assets/logo.png'
+import logo from '../../assets/banner/logo.png'
 import DarkMode from "../DarkMode/DarkMode";
 import userIcon from '../../assets/user/user.png'
  
@@ -69,7 +69,7 @@ const Navbar = () => {
   <div className="">
       <div className=" lg:w-9/12  mx-auto  top-0  md:px-0">
      
-     <div className="navbar lg:w-9/12  fixed bg-black/30 px-5   py-3 rounded-full  backdrop-blur text-white z-30">
+     <div className="navbar lg:w-9/12  fixed bg-black/30 px-5  rounded-full  backdrop-blur text-white z-30">
        <div className="navbar-start">
          <div className="dropdown">
            <label
