@@ -64,7 +64,7 @@ const Register = () => {
                   Name
                   <input
                     className="block mb-3 outline-none px-3 py-2 rounded mt-2 border w-full"
-                    type="text"
+                    type="name"
                     name="name"
                     id=""
                     placeholder="Your Name"
@@ -90,8 +90,8 @@ const Register = () => {
                   Photo
                   <input
                     className="block mb-3 outline-none px-3 py-2 rounded mt-2 border w-full"
-                    type="url"
-                    name="email"
+                    type="photo"
+                    name="url"
                     id=""
                     placeholder="Photo url"
                     {...register("photo", { required: true })}

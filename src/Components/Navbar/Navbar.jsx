@@ -138,11 +138,13 @@ const Navbar = () => {
 
            <ul
              tabIndex={0}
-             className="mt-3 z-[1] p-4 shadow menu menu-sm dropdown-content bg-black text-white  w-56 rounded-lg"
+             className="mt-3 z-[1] p-4 shadow menu menu-sm dropdown-content gap-y-3 bg-black text-white  w-56 rounded-lg"
            >
              <li>{user ? user.displayName : ""}</li>
              <li>{user ? user.email : ""}</li>
-
+              <NavLink to='dashboard'>
+                Dashboard
+              </NavLink>
              {user ? (
            <button
              onClick={handleLogout}

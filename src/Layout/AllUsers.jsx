@@ -1,6 +1,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { FaTrash,  FaUsers } from "react-icons/fa";
+import { MdAddModerator } from "react-icons/md";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import HeadingContent from "../shared/HeadingContent";
@@ -19,7 +20,7 @@ const AllUsers = () => {
     },
   });
   
-  
+  // make admin part 
   const handleMakeAdmin = (user) => {
     axiosSecure.patch(`/users/admin/${user._id}`)
     .then(res => {
@@ -29,6 +30,24 @@ const AllUsers = () => {
           position: "Successfully Added",
           icon: "success",
           title: `${user.name} has been Added`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+        refetch()
+      }
+    })
+  }
+
+  //  make moderator part 
+  const handleModerator = (mode) => {
+    axiosSecure.put(`/users/mode/${mode._id}`)
+    .then(res => {
+      console.log(res.data);
+      if(res.data.modifiedCount > 0)  {
+        Swal.fire({
+          position: "Successfully Added",
+          icon: "success",
+          title: `${mode.name} has been Added`,
           showConfirmButton: false,
           timer: 1500
         });
@@ -85,7 +104,8 @@ const AllUsers = () => {
                 <th></th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Role</th>
+                <th>Admin</th>
+                <th>Moderator</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -97,6 +117,9 @@ const AllUsers = () => {
                 <td>{item.email}</td>
                 <td>
                 {item.role === 'admin'?  <span className="text-violet-600 font-semibold">Admin</span> : <button onClick={()=>handleMakeAdmin(item)}><FaUsers/></button>}
+                </td>
+                <td>
+                {item.mode === 'moderator'?  <span className="text-violet-600 font-semibold">Moderator</span> : <button onClick={()=>handleModerator(item)}><MdAddModerator/></button>}
                 </td>
                 <td>
                   <button onClick={() => handleDeleted(item)}><FaTrash/></button>
