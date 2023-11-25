@@ -8,6 +8,9 @@ import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import DashBoard from "../Dashboard/DashBoard";
 import AllUsers from "../Layout/AllUsers";
 import Details from "../Layout/Details";
+import AdminRoute from "../AdminRoutes/AdminRoutes";
+import ReviewContent from "../Dashboard/ReviewContent";
+import ReportContent from "../Dashboard/ReportContent";
 
 const router = createBrowserRouter([
   {
@@ -32,13 +35,13 @@ const router = createBrowserRouter([
       },
       {
         path: "details/:id",
-        loader : ({params}) => fetch(`http://localhost:2000/watch/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:2000/watch/${params.id}`),
         element: (
           <PrivateRoute>
             <Details />
           </PrivateRoute>
         ),
-       
       },
     ],
   },
@@ -52,8 +55,20 @@ const router = createBrowserRouter([
     ),
     children: [
       {
+        path : 'reviewContent',
+        element : <ReviewContent/>
+      },
+      {
+        path : 'reportContent',
+        element : <ReportContent/>
+      },
+      {
         path: "allusers",
-        element: <AllUsers />,
+        element: (
+          <AdminRoute>
+            <AllUsers />,
+          </AdminRoute>
+        ),
       },
     ],
   },

@@ -19,6 +19,7 @@ const AllUsers = () => {
       return res.data;
     },
   });
+  console.log(users);
   
   // make admin part 
   const handleMakeAdmin = (user) => {

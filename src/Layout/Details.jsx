@@ -64,7 +64,21 @@ const Details = () => {
   }
   // report part 
   const handleReport = () => {
-    
+    axiosPublic.post('/report', data)
+    .then(res => {
+      console.log(res.data);
+      if(res.data.insertedId){
+        console.log('user added to database');
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Report Successfull",
+          showConfirmButton: false,
+          timer: 1500
+        });
+         
+      }
+    })
   }
   return (
     <div>

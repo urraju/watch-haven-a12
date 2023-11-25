@@ -19,9 +19,7 @@ const Login = () => {
     signIn(email,password)
     .then(res => {
       console.log(res);
-      // if(localStorage.getItem('access-token')){
-      //   navigate(location.state ? location.state : '/')
-      // }
+      
       navigate(location.state ? location.state : '/')
     })
 

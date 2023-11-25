@@ -4,7 +4,6 @@ import useAuth from "../../AuthContext/useAuth/useAuth";
 import logo from '../../assets/banner/logo.png'
 import DarkMode from "../DarkMode/DarkMode";
 import userIcon from '../../assets/user/user.png'
-import useAdmin from "../../hooks/useAdmin";
 import { useEffect, useState } from "react";
  
 const Navbar = () => {
