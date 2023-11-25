@@ -10,11 +10,10 @@ export const axiosSecure = axios.create({
 const useAxiosSecure = () => {
     const navigate = useNavigate();
     const { singout } = useAuth();
-
-    // request interceptor to add authorization header for every secure call to teh api
+ 
     axiosSecure.interceptors.request.use(function (config) {
         const token = localStorage.getItem('access-token')
-
+        console.log(77,token);
         config.headers.authorization = `Bearer ${token}`;
         return config;
     }, function (error) {

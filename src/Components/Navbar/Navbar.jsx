@@ -1,13 +1,48 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import useAuth from "../../AuthContext/useAuth/useAuth";
 import logo from '../../assets/banner/logo.png'
 import DarkMode from "../DarkMode/DarkMode";
 import userIcon from '../../assets/user/user.png'
+import useAdmin from "../../hooks/useAdmin";
+import { useEffect, useState } from "react";
  
 const Navbar = () => {
+  const [loading , setLoading] = useState(false)
   const { user, singout } = useAuth();
-  console.log(user);
+  const navigate = useNavigate()
+  
+  const [isAdmin , setIsAdmin] = useState(false)
+  console.log(localStorage.getItem('access-token'));
+  useEffect(() => {
+   if(user?.email && localStorage.getItem('access-token')){
+    fetch(`http://localhost:2000/users/admin/${user?.email}`,{
+      method : 'GET',
+      headers : {
+        authorization : `Bearer ${localStorage.getItem('access-token')}`
+      }
+    })
+    .then(res => {
+       console.log(res.status);
+      if(res.status === 401 || res.status === 403){
+        singout()
+        navigate('/login')
+
+      }else{
+        return res.json()
+      }
+    })
+     .then(data =>  setIsAdmin(data.admin))
+      
+   }
+  },[user?.email,loading])
+ 
+  useEffect(() => {
+     setTimeout(() => {
+    setLoading(true)
+},1000)
+ 
+  },[])
   
   const handleLogout = () => {
     singout().then().catch();
@@ -56,12 +91,12 @@ const Navbar = () => {
       >
         Products
       </NavLink>
-      <NavLink
+     {isAdmin ?  <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
         to="/ourshop"
       >
         DashBoard
-      </NavLink>
+      </NavLink> : ''}
       <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
         to="/login"
@@ -142,9 +177,9 @@ const Navbar = () => {
            >
              <li>{user ? user.displayName : ""}</li>
              <li>{user ? user.email : ""}</li>
-              <NavLink to='dashboard'>
+              {user ? <NavLink to='dashboard'>
                 Dashboard
-              </NavLink>
+              </NavLink> : ''}
              {user ? (
            <button
              onClick={handleLogout}

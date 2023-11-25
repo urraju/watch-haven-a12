@@ -46,7 +46,7 @@ const AuthContext = ({children}) => {
             
         })
         return () => {
-            unSubscribe()
+           return unSubscribe()
         }
     },[axiosPublic])
     const authInfo = {registation,signIn,singout,user,loading,google}

@@ -19,6 +19,9 @@ const Login = () => {
     signIn(email,password)
     .then(res => {
       console.log(res);
+      // if(localStorage.getItem('access-token')){
+      //   navigate(location.state ? location.state : '/')
+      // }
       navigate(location.state ? location.state : '/')
     })
 
@@ -26,6 +29,9 @@ const Login = () => {
   useEffect(() => {
     loadCaptchaEnginge(6); 
   },[])
+  
+   
+    
   
   const handleCaptcha = (e) => {
     const user_captcha_value = e.target.value

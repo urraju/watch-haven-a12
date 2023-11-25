@@ -6,8 +6,8 @@ import Register from "../User/Register";
 import Products from "../Pages/Products";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 import DashBoard from "../Dashboard/DashBoard";
-import AdminRoute from "../AdminRoutes/AdminRoutes";
 import AllUsers from "../Layout/AllUsers";
+import Details from "../Layout/Details";
 
 const router = createBrowserRouter([
   {
@@ -30,9 +30,19 @@ const router = createBrowserRouter([
         path: "register",
         element: <Register />,
       },
+      {
+        path: "details/:id",
+        loader : ({params}) => fetch(`http://localhost:2000/watch/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <Details />
+          </PrivateRoute>
+        ),
+       
+      },
     ],
   },
-//   dash layout part 
+  //   dash layout part
   {
     path: "/dashboard",
     element: (
@@ -40,14 +50,12 @@ const router = createBrowserRouter([
         <DashBoard />
       </PrivateRoute>
     ),
-    children : [
-        {
-            path : 'allusers',
-            element : 
-                <AllUsers/>
-            
-        }
-    ]
+    children: [
+      {
+        path: "allusers",
+        element: <AllUsers />,
+      },
+    ],
   },
 ]);
 export default router;

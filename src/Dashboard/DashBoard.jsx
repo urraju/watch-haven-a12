@@ -12,16 +12,36 @@ import {
   FaUtensils,
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
-import useAdmin from "../hooks/useAdmin";
+import useAuth from "../AuthContext/useAuth/useAuth";
+import useAdmin2 from "../hooks/useAdmin2";
+import useModerator from "../hooks/useModerator";
 
 const DashBoard = () => {
-  const [isAdmin] = useAdmin()
+  const {user} = useAuth()
+  const [isModerator] = useModerator()
+  const [isAdmin] = useAdmin2()
+  // const [isAdmin , setIsAdmin] = useState(false)
+  // console.log(isAdmin);
+  // console.log(localStorage.getItem('access-token'));
+  // useEffect(() => {
+  //  if(user?.email){
+  //   fetch(`http://localhost:2000/users/admin/${user?.email}`,{
+  //     method : 'GET',
+  //     headers : {
+  //       authorization : `Bearer ${localStorage.getItem('access-token')}`
+  //     }
+  //   })
+  //   .then(res => res.json())
+  //    .then(data =>  setIsAdmin(data.admin))
+  //  }
+  // },[user?.email])
    
   return (
     <div className="grid p-5 gap-10 justify-evenly grid-cols-12 max-w-screen-2xl mx-auto">
       <div className="bg-success rounded-lg p-10 col-span-3 min-h-screen">
       
         <ul className="flex flex-col gap-4">
+          {isModerator ? <NavLink>Moderator Home</NavLink> : ''}
           {
             isAdmin ? 
             <>
@@ -99,7 +119,7 @@ const DashBoard = () => {
               User Home
             </NavLink>  
           </li>
-                 <li>
+                 {/* <li>
             <NavLink
               className="flex text-xl gap-2 items-center uppercase"
               to="/DashBoard/adminhome"
@@ -107,7 +127,7 @@ const DashBoard = () => {
               <FaHome />
               Admin Home
             </NavLink>  
-          </li>
+          </li> */}
           <li>
             <NavLink
               className="flex text-xl gap-2 items-center uppercase"
