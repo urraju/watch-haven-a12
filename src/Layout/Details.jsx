@@ -6,11 +6,22 @@ import useAuth from "../AuthContext/useAuth/useAuth";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import ReviewCard from "./ReviewCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { FreeMode, Pagination } from "swiper/modules";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
+
 const Details = () => {
-  const {user} = useAuth()
+  const { user } = useAuth();
   const data = useLoaderData();
-  const axiosPublic = useAxiosPublic()
-  const axiosSecure = useAxiosSecure()
+  const axiosPublic = useAxiosPublic();
+  const axiosSecure = useAxiosSecure();
   console.log(data);
   const {
     _id,
@@ -18,78 +29,82 @@ const Details = () => {
     product_image,
     vote,
     tags,
-     
+
     date,
     status,
     description,
     external_links,
-    
   } = data;
 
   const reportValue = {
-    product_id : _id,
-    product_name : product_name,
-  }
+    product_id: _id,
+    product_name: product_name,
+  };
 
   const handlePost = () => {
     document.getElementById("my_modal_3").showModal();
-  }
+  };
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
     const rating = form.rating.value;
     const name = form.name.value;
     const comment = form.comment.value;
-  
+
     const reviewValue = {
-      product_id : _id,
-      product_name : product_name,
-      status : status,
+      product_id: _id,
+      product_name: product_name,
+      status: status,
       photoURL: user?.photoURL,
       rating: rating,
-      name : name,
+      name: name,
       comment: comment,
       userName: user?.displayName,
     };
-    axiosPublic.post('/review', reviewValue)
-    .then(res => {
+    axiosPublic.post("/review", reviewValue).then((res) => {
       console.log(res.data);
-      if(res.data.insertedId){
-        console.log('user added to database');
+      if (res.data.insertedId) {
+        console.log("user added to database");
         Swal.fire({
           position: "top-end",
           icon: "success",
           title: "Review Successfull",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
-         
-        form.reset()
+
+        form.reset();
       }
-    })
-  }
-  // report part 
+    });
+  };
+  // report part
   const handleReport = () => {
-    axiosSecure.post('/report', reportValue)
-    .then(res => {
+    axiosSecure.post("/report", reportValue).then((res) => {
       console.log(res.data);
-      if(res.data.insertedId){
-        console.log('user added to database');
+      if (res.data.insertedId) {
+        console.log("user added to database");
         Swal.fire({
           position: "top-end",
           icon: "success",
           title: "Report Successfull",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
-         
       }
-    })
-  }
+    });
+  };
+  const { data: review = [] } = useQuery({
+    queryKey: ["review"],
+    queryFn: async () => {
+      const res = await axiosPublic.get("/review");
+      return res.data;
+    },
+  });
+  console.log(review);
   return (
-    <div>
+    <div className="p-5">
       <TilteContent heading={"Product Details"} img={img} />
-      <div className="bg-gray-300 p-10 flex flex-col md:flex-row justify-around items-center">
+      <div className="bg-gray-300 max-w-screen-2xl mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
         <img className="w-[400px]" src={product_image} alt="" />
         <div className="space-y-1">
           <p className="font-kdam font-semibold">
@@ -120,19 +135,30 @@ const Details = () => {
             {vote}
           </button>
           <div className=" mb-3 ">
-          <span className="font-kdam mr-2">Buy Product : </span> 
-            {external_links.map((link, index) => 
-
-            <a className="  px-4 text-blue-500 bg-blue-100 hover:underline  rounded mr-2" href={link}>Visit {index + 1}</a> 
-            
-            )}
+            <span className="font-kdam mr-2">Buy Product : </span>
+            {external_links.map((link, index) => (
+              <a
+                className="  px-4 text-blue-500 bg-blue-100 hover:underline  rounded mr-2"
+                href={link}
+              >
+                Visit {index + 1}
+              </a>
+            ))}
           </div>
           <div className="flex gap-2 mt-4">
-            <button onClick={handleReport} className="bg-red-700 px-3 text-white font-roboto font-light ">Report</button>
-            <button onClick={handlePost} className="bg-success px-3 text-white font-roboto font-light ">Review</button>
+            <button
+              onClick={handleReport}
+              className="bg-red-700 px-3 text-white font-roboto font-light "
+            >
+              Report
+            </button>
+            <button
+              onClick={handlePost}
+              className="bg-success px-3 text-white font-roboto font-light "
+            >
+              Review
+            </button>
           </div>
-          
-          
         </div>
       </div>
       {/* modal review  */}
@@ -169,7 +195,7 @@ const Details = () => {
                 />
               </label>
               <label className="font-josefin " htmlFor="">
-                 Description
+                Description
                 <textarea
                   className="w-full text-lg  font-roboto mt-1 border border-teal-300 px-2 rounded outline-none"
                   name="comment"
@@ -183,12 +209,42 @@ const Details = () => {
                 className="flex gap-2 text-white rounded mx-auto mt-4 justify-center w-72 py-1 items-center bg-yellow-400 "
                 type="submit"
               >
-                 Add Review<AiOutlineStar />
+                Add Review
+                <AiOutlineStar />
               </button>
             </form>
           </div>
         </div>
       </dialog>
+
+      {/* review card  */}
+      <div className=" w-full lg:max-w-screen-xl mx-auto mt-20" >
+        <Swiper
+          
+          spaceBetween={20}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+          className="mySwiper"
+        >
+          {review.map((item) => (
+            <SwiperSlide className="grid grid-cols-1  p-8 bg-gray-300 gap-2 lg:gap-5 lg:grid-cols-3">
+              <div className="border w-max p-2 rounded-xl">
+              <img className="w-28 rounded-xl " src={item.photoURL} alt="" />
+              </div>
+              <div>
+                <p className="font-kdam text-xl mt-1">{item.name}</p>
+                <p>{item.comment}</p>
+                <p>
+                  <Rating  style={{ maxWidth: 100,  }} value={item.rating} readOnly />
+                </p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
