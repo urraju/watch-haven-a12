@@ -41,7 +41,7 @@ const DashBoard = () => {
   // },[user?.email])
 
   return (
-    <div className="grid p-5 gap-10 justify-evenly grid-cols-12 max-w-screen-2xl mx-auto">
+    <div className="grid w-full p-5 gap-10 justify-evenly  lg:grid-cols-12 max-w-screen-2xl mx-auto">
       <div className="bg-gradient-to-bl to-yellow- from-yellow-700 rounded-lg p-10 col-span-4 min-h-screen">
         <div>
           <div className="flex gap-3 items-center mb-5 ">
@@ -161,7 +161,7 @@ const DashBoard = () => {
           </NavLink>
         </ul>
       </div>
-      <div className="col-span-8  rounded-lg w-full bg-opacity-40 bg-gray-400 justify-center flex ">
+      <div className=" lg:col-span-8  rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-yellow-500 justify-center flex ">
         <Outlet />
       </div>
     </div>

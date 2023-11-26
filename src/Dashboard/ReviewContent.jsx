@@ -56,7 +56,7 @@ const ReviewContent = () => {
             {/* head */}
             <thead className="bg-yellow-500  ">
               <tr className="font-kdam ">
-                <th className="rounded-tl-lg">NO</th>
+                <th className="rounded-tl-lg">No</th>
                 <th >Product Name</th>
                 <th>Details</th>
                 <th>Features</th>
@@ -68,9 +68,9 @@ const ReviewContent = () => {
               {review.map((rev, index) => (
                 <tr key={rev.id}>
                   <th>{index + 1}</th>
-                  <td>{rev.product_name}</td>
-                  <td><Link to={`details/${rev._id}`}>Details</Link></td>
-                  <td><Link to='/features'>Feature</Link></td>
+                  <td className="font-kdam">{rev.product_name}</td>
+                  <td className="font-semibold"><Link to={`/details/${rev.product_id}`}>View Details</Link></td>
+                  <td className="font-semibold"><Link to='/features'>Go Feature</Link></td>
 
                   <td>{rev.status2 ? <button disabled  className="text-success font-bold">Accepted</button> : rev.status3 ? <button  disabled className="font-bebas font-bold">Accept</button> :<button onClick={() => handleAccept(rev._id)} className="font-bebas font-bold">Accept</button>}</td>
 

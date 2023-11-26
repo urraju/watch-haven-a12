@@ -12,6 +12,7 @@ import AdminRoute from "../AdminRoutes/AdminRoutes";
 import ReviewContent from "../Dashboard/ReviewContent";
 import ReportContent from "../Dashboard/ReportContent";
 import Features from "../Components/Features/Features";
+import AddProduct from "../userDashboard/AddProduct";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path : 'reportContent',
         element : <ReportContent/>
+      },
+      {
+        path : 'addProduct',
+        element : <AddProduct/>
       },
       {
         path: "allusers",

@@ -5,10 +5,12 @@ import { AiOutlineStar } from "react-icons/ai";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 const Details = () => {
   const {user} = useAuth()
   const data = useLoaderData();
   const axiosPublic = useAxiosPublic()
+  const axiosSecure = useAxiosSecure()
   const navigate = useNavigate()
   console.log(data);
   const {
@@ -17,7 +19,7 @@ const Details = () => {
     product_image,
     vote,
     tags,
-    owner_email,
+     
     date,
     status,
     description,
@@ -26,7 +28,10 @@ const Details = () => {
     featured,
   } = data;
 
-
+  const reportValue = {
+    product_id : _id,
+    product_name : product_name,
+  }
 
   const handlePost = () => {
     document.getElementById("my_modal_3").showModal();
@@ -39,6 +44,7 @@ const Details = () => {
     const comment = form.comment.value;
   
     const reviewValue = {
+      product_id : _id,
       product_name : product_name,
       status : status,
       photoURL: user?.photoURL,
@@ -66,7 +72,7 @@ const Details = () => {
   }
   // report part 
   const handleReport = () => {
-    axiosPublic.post('/report', data)
+    axiosSecure.post('/report', reportValue)
     .then(res => {
       console.log(res.data);
       if(res.data.insertedId){
