@@ -162,9 +162,12 @@ const DashBoard = () => {
           </NavLink>
         </ul>
       </div>
+      
+
       <div className=" lg:col-span-8  rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-yellow-500 justify-center flex ">
         <Outlet />
       </div>
+
     </div>
   );
 };

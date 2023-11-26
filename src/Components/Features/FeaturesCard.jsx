@@ -36,7 +36,7 @@ const FeaturesCard = ({data,refetch}) => {
     }
     return(   
         <div>
-             <div className="bg-gradient-to-bl border rounded-xl from-gray-200  to-yellow-50 justify-between p-4 h-[350px] ">
+             <div className="bg-gradient-to-bl border rounded-xl from-gray-200  to-yellow-50 justify-between p-4 h-[370px] ">
                     <img className="w-44 flex-1 object-fill mx-auto" src={product_image} alt="" />
                    <div className=" mt-5 ">
                    <Link to={`/details/${_id}`} className="text-lg   flex font-kdam items-center gap-2 text-black mb-2">{product_name}<FaArrowRight className="text-sm text-yellow-400"/></Link>

@@ -11,7 +11,6 @@ const Details = () => {
   const data = useLoaderData();
   const axiosPublic = useAxiosPublic()
   const axiosSecure = useAxiosSecure()
-  const navigate = useNavigate()
   console.log(data);
   const {
     _id,
@@ -24,8 +23,7 @@ const Details = () => {
     status,
     description,
     external_links,
-    product_id,
-    featured,
+    
   } = data;
 
   const reportValue = {
@@ -65,7 +63,7 @@ const Details = () => {
           showConfirmButton: false,
           timer: 1500
         });
-        navigate('/details')
+         
         form.reset()
       }
     })

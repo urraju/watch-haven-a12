@@ -10,17 +10,31 @@ import useAxiosPublic from "../hooks/useAxiosPublic";
 const Register = () => {
   const location = useLocation()
   const navigate = useNavigate()
-  const {registation} = useAuth()
+  const {registation,userUpdateProfile} = useAuth()
   const axiosPublic = useAxiosPublic()
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     registation(data.email,data.password)
     .then(result => {
+      userUpdateProfile(data.name, data.photo)
+      .then(() => {
+        console.log('user profile info updated');
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "User profile is updated",
+          showConfirmButton: false,
+          timer: 1500
+        });
+        reset()
+      })
+      .catch(errors => console.log(errors))
       const userInfo = {
         name : data.name,
         email : data.email
@@ -64,7 +78,7 @@ const Register = () => {
                   Name
                   <input
                     className="block mb-3 outline-none px-3 py-2 rounded mt-2 border w-full"
-                    type="name"
+                    type="text"
                     name="name"
                     id=""
                     placeholder="Your Name"
@@ -90,13 +104,13 @@ const Register = () => {
                   Photo
                   <input
                     className="block mb-3 outline-none px-3 py-2 rounded mt-2 border w-full"
-                    type="photo"
-                    name="url"
+                    type="url"
+                    name="photo"
                     id=""
                     placeholder="Photo url"
                     {...register("photo", { required: true })}
                   />
-                  {errors.email && <span className="text-red-600 block">This  url is required</span>}
+                  {errors.ulr && <span className="text-red-600 block">This  url is required</span>}
                 </label>
                 <label htmlFor="">
                   Confirm Password

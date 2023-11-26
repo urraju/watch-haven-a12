@@ -8,19 +8,19 @@ import { useQuery } from "@tanstack/react-query";
  
 
  const Products = () => {
-   //  const [watch] = useAllData()
-   const [search, setSearch] = useState()
-
+    const [watch] = useAllData()
+   const [search, setSearch] = useState('')
+   const [data , setData] = useState(watch)
    const axiosPublic = useAxiosPublic();
   const {
-    data: watch = [],
+    data: watcher = [],
     refetch,
     isPending: loading,
   } = useQuery({
     queryKey: ["watcher", search],
     queryFn: async () => {
       const res = await axiosPublic.get(`/watch?search=${search}`);
-
+      setData(res.data)
       return res.data;
     },
   });
@@ -43,7 +43,7 @@ import { useQuery } from "@tanstack/react-query";
         </div>
          <div className="max-w-screen-2xl mx-auto ">
             <div className="grid p-5 mt-20 grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
-                {watch.map(item => <ProductCard key={item._id} data={item}/>)}
+                {data.map(item => <ProductCard key={item._id} data={item}/>)}
             </div>
         </div>
        </div>

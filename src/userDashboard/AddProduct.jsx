@@ -41,7 +41,7 @@ const AddProduct = () => {
                 placeholder="Product Description"
                 id=""
                 cols="30"
-                rows="10"
+                rows="2"
               ></textarea>
             </label>
             <label className="font-kdam">

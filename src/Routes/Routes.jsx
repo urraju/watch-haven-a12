@@ -13,6 +13,7 @@ import ReviewContent from "../Dashboard/ReviewContent";
 import ReportContent from "../Dashboard/ReportContent";
 import Features from "../Components/Features/Features";
 import AddProduct from "../userDashboard/AddProduct";
+import TrendingProduct from "../Components/TrendingProduct/TrendingProduct";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: "features",
         element: <Features />,
       },
+      // {
+      //   path: "trandingProduct",
+      //   element: <TrendingProduct />,
+      // },
       {
         path: "products",
         element: <Products />,
