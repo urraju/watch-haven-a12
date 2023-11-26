@@ -39,6 +39,8 @@ const Details = () => {
     const comment = form.comment.value;
   
     const reviewValue = {
+      product_name : product_name,
+      status : status,
       photoURL: user?.photoURL,
       rating: rating,
       name : name,
@@ -113,12 +115,23 @@ const Details = () => {
             <span className="font-kdam">Vote : </span>
             {vote}
           </button>
-          <div className="flex gap-2">
+          <div className=" mb-3 ">
+          <span className="font-kdam mr-2">Buy Product : </span> 
+            {external_links.map((link, index) => 
+
+            <a className="  px-4 text-blue-500 bg-blue-100 hover:underline  rounded mr-2" href={link}>Visit {index + 1}</a> 
+            
+            )}
+          </div>
+          <div className="flex gap-2 mt-4">
             <button onClick={handleReport} className="bg-red-700 px-3 text-white font-roboto font-light ">Report</button>
             <button onClick={handlePost} className="bg-success px-3 text-white font-roboto font-light ">Review</button>
           </div>
+          
+          
         </div>
       </div>
+      {/* modal review  */}
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
           <form method="dialog">

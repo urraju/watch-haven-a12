@@ -11,6 +11,7 @@ import Details from "../Layout/Details";
 import AdminRoute from "../AdminRoutes/AdminRoutes";
 import ReviewContent from "../Dashboard/ReviewContent";
 import ReportContent from "../Dashboard/ReportContent";
+import Features from "../Components/Features/Features";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "features",
+        element: <Features />,
       },
       {
         path: "products",

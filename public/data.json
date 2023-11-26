@@ -12,10 +12,11 @@
       "vote" : 0,
       "owner_email": "owner1@example.com",
       "date": "2023-11-01",
-      "status": "accepted",
+      "status": "pending",
       "description": "A classic and elegant timepiece with a gold finish and leather strap.",
       "external_links": [
-        "https://example.com/elegance-classic"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch001",
       "featured": true
@@ -33,10 +34,11 @@
       "vote" : 0,
       "owner_email": "owner2@example.com",
       "date": "2023-11-02",
-      "status": "accepted",
+      "status": "pending",
       "description": "A sporty chronograph watch designed for adventurous souls.",
       "external_links": [
-        "https://example.com/sporty-adventure"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch002",
       "featured": false
@@ -54,10 +56,11 @@
       "vote" : 0,
       "owner_email": "owner3@example.com",
       "date": "2023-11-03",
-      "status": "accepted",
+      "status": "pending",
       "description": "A sleek and modern watch with a minimalist design and silver mesh strap.",
       "external_links": [
-        "https://example.com/modern-minimalist"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch003",
       "featured": true
@@ -75,10 +78,11 @@
       "vote" : 0,
       "owner_email": "owner4@example.com",
       "date": "2023-11-04",
-      "status": "accepted",
+      "status": "pending",
       "description": "A timeless classic with a rose gold finish and genuine leather strap.",
       "external_links": [
-        "https://example.com/classic-rose-gold"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch004",
       "featured": false
@@ -96,10 +100,11 @@
       "vote" : 0,
       "owner_email": "owner5@example.com",
       "date": "2023-11-05",
-      "status": "accepted",
+      "status": "pending",
       "description": "A masterful chronograph watch with a stainless steel case and black dial.",
       "external_links": [
-        "https://example.com/chrono-master"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch005",
       "featured": true
@@ -117,10 +122,11 @@
       "vote" : 0,
       "owner_email": "owner6@example.com",
       "date": "2023-11-06",
-      "status": "accepted",
+      "status": "pending",
       "description": "A vintage-inspired watch for explorers, featuring a brown leather strap.",
       "external_links": [
-        "https://example.com/vintage-explorer"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch006",
       "featured": false
@@ -138,10 +144,11 @@
       "vote" : 0,
       "owner_email": "owner7@example.com",
       "date": "2023-11-07",
-      "status": "accepted",
+      "status": "pending",
       "description": "A sleek titanium watch with a modern design and a touch of blue accents.",
       "external_links": [
-        "https://example.com/sleek-titanium"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch007",
       "featured": true
@@ -159,10 +166,11 @@
       "vote" : 0,
       "owner_email": "owner8@example.com",
       "date": "2023-11-08",
-      "status": "accepted",
+      "status": "pending",
       "description": "A dapper black watch with a leather strap, perfect for any occasion.",
       "external_links": [
-        "https://example.com/dapper-black"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch008",
       "featured": false
@@ -180,10 +188,11 @@
       "vote" : 0,
       "owner_email": "owner9@example.com",
       "date": "2023-11-09",
-      "status": "accepted",
+      "status": "pending",
       "description": "An elegant watch with a golden finish and a luxurious mesh strap.",
       "external_links": [
-        "https://example.com/golden-elegance"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch009",
       "featured": true
@@ -201,10 +210,11 @@
       "vote" : 0,
       "owner_email": "owner10@example.com",
       "date": "2023-11-10",
-      "status": "accepted",
+      "status": "pending",
       "description": "A timeless beauty with a rose gold case and a white dial.",
       "external_links": [
-        "https://example.com/timeless-beauty"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch010",
       "featured": false
@@ -222,10 +232,11 @@
       "vote" : 0,
       "owner_email": "owner11@example.com",
       "date": "2023-11-11",
-      "status": "accepted",
+      "status": "pending",
       "description": "A unique and modern watch with a sapphire blue dial and silver details.",
       "external_links": [
-        "https://example.com/sapphire-blue"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch011",
       "featured": true
@@ -243,10 +254,11 @@
       "vote" : 0,
       "owner_email": "owner12@example.com",
       "date": "2023-11-12",
-      "status": "accepted",
+      "status": "pending",
       "description": "A royal black watch with a sophisticated design and genuine leather strap.",
       "external_links": [
-        "https://example.com/royal-black"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch012",
       "featured": false
@@ -264,10 +276,11 @@
       "vote" : 0,
       "owner_email": "owner13@example.com",
       "date": "2023-11-13",
-      "status": "accepted",
+      "status": "pending",
       "description": "An ocean blue diver's watch with a sporty and adventurous spirit.",
       "external_links": [
-        "https://example.com/ocean-blue"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch013",
       "featured": true
@@ -285,10 +298,11 @@
       "vote" : 0,
       "owner_email": "owner14@example.com",
       "date": "2023-11-14",
-      "status": "accepted",
+      "status": "pending",
       "description": "A regal rose gold watch with a stylish and sophisticated appearance.",
       "external_links": [
-        "https://example.com/regal-rose"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch014",
       "featured": false
@@ -306,10 +320,11 @@
       "vote" : 0,
       "owner_email": "owner15@example.com",
       "date": "2023-11-15",
-      "status": "accepted",
+      "status": "pending",
       "description": "A stealthy black chronograph watch with a modern and bold design.",
       "external_links": [
-        "https://example.com/stealthy-black"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch015",
       "featured": true
@@ -327,10 +342,11 @@
       "vote" : 0,
       "owner_email": "owner16@example.com",
       "date": "2023-11-16",
-      "status": "accepted",
+      "status": "pending",
       "description": "A time traveler's watch with a silver finish and a unique design.",
       "external_links": [
-        "https://example.com/time-traveler"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch016",
       "featured": false
@@ -348,10 +364,11 @@
       "vote" : 0,
       "owner_email": "owner17@example.com",
       "date": "2023-11-17",
-      "status": "accepted",
+      "status": "pending",
       "description": "A watch with a golden mesh strap, radiating elegance and luxury.",
       "external_links": [
-        "https://example.com/golden-mesh"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch017",
       "featured": true
@@ -369,10 +386,11 @@
       "vote" : 0,
       "owner_email": "owner18@example.com",
       "date": "2023-11-18",
-      "status": "accepted",
+      "status": "pending",
       "description": "A watch with retro vibes and a brown leather strap for a unique look.",
       "external_links": [
-        "https://example.com/retro-vibes"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch018",
       "featured": false
@@ -390,10 +408,11 @@
       "vote" : 0,
       "owner_email": "owner19@example.com",
       "date": "2023-11-19",
-      "status": "accepted",
+      "status": "pending",
       "description": "A black chronograph watch with a modern design, representing infinite style.",
       "external_links": [
-        "https://example.com/infinite-black"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch019",
       "featured": true
@@ -411,10 +430,11 @@
       "vote" : 0,
       "owner_email": "owner20@example.com",
       "date": "2023-11-20",
-      "status": "accepted",
+      "status": "pending",
       "description": "A lunar-inspired watch with a silver finish and a minimalist, sophisticated design.",
       "external_links": [
-        "https://example.com/lunar-silver"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch020",
       "featured": false
@@ -432,10 +452,11 @@
       "vote" : 0,
       "owner_email": "owner21@example.com",
       "date": "2023-11-21",
-      "status": "accepted",
+      "status": "pending",
       "description": "A watch designed for urban explorers, featuring a stylish blue dial.",
       "external_links": [
-        "https://example.com/urban-explorer"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch021",
       "featured": true
@@ -453,10 +474,11 @@
       "vote" : 0,
       "owner_email": "owner22@example.com",
       "date": "2023-11-22",
-      "status": "accepted",
+      "status": "pending",
       "description": "A watch with crystal clear details, silver accents, and an elegant design.",
       "external_links": [
-        "https://example.com/crystal-clear"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch022",
       "featured": false
@@ -474,10 +496,11 @@
       "vote" : 0,
       "owner_email": "owner1@example.com",
       "date": "2023-11-01",
-      "status": "accepted",
+      "status": "pending",
       "description": "A classic and elegant timepiece with a gold finish and leather strap.",
       "external_links": [
-        "https://example.com/elegance-classic"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0023",
       "featured": true
@@ -495,10 +518,11 @@
       "vote" : 0,
       "owner_email": "owner2@example.com",
       "date": "2023-11-02",
-      "status": "accepted",
+      "status": "pending",
       "description": "A sporty chronograph watch designed for adventurous souls.",
       "external_links": [
-        "https://example.com/sporty-adventure"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0024",
       "featured": false
@@ -516,10 +540,11 @@
       "vote" : 0,
       "owner_email": "owner3@example.com",
       "date": "2023-11-03",
-      "status": "accepted",
+      "status": "pending",
       "description": "A sleek and modern watch with a minimalist design and silver mesh strap.",
       "external_links": [
-        "https://example.com/modern-minimalist"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0025",
       "featured": true
@@ -537,10 +562,11 @@
       "vote" : 0,
       "owner_email": "owner4@example.com",
       "date": "2023-11-04",
-      "status": "accepted",
+      "status": "pending",
       "description": "A timeless classic with a rose gold finish and genuine leather strap.",
       "external_links": [
-        "https://example.com/classic-rose-gold"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0026",
       "featured": false
@@ -558,10 +584,11 @@
       "vote" : 0,
       "owner_email": "owner5@example.com",
       "date": "2023-11-05",
-      "status": "accepted",
+      "status": "pending",
       "description": "A masterful chronograph watch with a stainless steel case and black dial.",
       "external_links": [
-        "https://example.com/chrono-master"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0027",
       "featured": true
@@ -579,10 +606,11 @@
       "vote" : 0,
       "owner_email": "owner6@example.com",
       "date": "2023-11-06",
-      "status": "accepted",
+      "status": "pending",
       "description": "A vintage-inspired watch for explorers, featuring a brown leather strap.",
       "external_links": [
-        "https://example.com/vintage-explorer"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0028",
       "featured": false
@@ -600,10 +628,11 @@
       "vote" : 0,
       "owner_email": "owner7@example.com",
       "date": "2023-11-07",
-      "status": "accepted",
+      "status": "pending",
       "description": "A sleek titanium watch with a modern design and a touch of blue accents.",
       "external_links": [
-        "https://example.com/sleek-titanium"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0029",
       "featured": true
@@ -621,10 +650,11 @@
       "vote" : 0,
       "owner_email": "owner8@example.com",
       "date": "2023-11-08",
-      "status": "accepted",
+      "status": "pending",
       "description": "A dapper black watch with a leather strap, perfect for any occasion.",
       "external_links": [
-        "https://example.com/dapper-black"
+        "https://www.daraz.com.bd/catalog/?q=watch+&_keyori=ss&from=input&spm=a2a0e.searchlist.search.go",
+        "https://www.alibaba.com/trade/search?spm=a2700.product_home_newuser.home_new_user_first_screen_fy23_pc_search_bar.associationItem_pos_2&tab=all&searchText=watch"
       ],
       "product_id": "watch0030",
       "featured": false
