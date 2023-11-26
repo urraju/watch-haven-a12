@@ -17,7 +17,7 @@ import { useQuery } from "@tanstack/react-query";
     refetch,
     isPending: loading,
   } = useQuery({
-    queryKey: ["watch"],
+    queryKey: ["watcher", search],
     queryFn: async () => {
       const res = await axiosPublic.get(`/watch?search=${search}`);
 
@@ -29,14 +29,16 @@ import { useQuery } from "@tanstack/react-query";
          const val = e.target.search.value
          setSearch(val)
          console.log(val);
+         refetch()
     }
     return(
        <div className="">
         <TilteContent heading={'All products'} img={img}/>
-        <div>
+        <div className="flex items-center border-l-2 border-yellow-500  rounded-r mt-10 h-max w-max mx-auto bg-gray-200 justify-center">
+         <h1></h1>
          <form onSubmit={handleSearch}  action="">
-            <input placeholder="search"  className="bg-gray-200 border border-red-500 mx-auto px-3 flex mt-20"   name="search" type="text" />
-            <button type="submit">search</button>
+            <input placeholder="Search Tags"  className="bg-gray-200 border py-2 outline-none px-3 "   name="search" type="text" />
+            <input className="bg-yellow-400 text-gray-600  uppercase rounded-r px-3 py-2" type="submit" value="Search" />
          </form>
         </div>
          <div className="max-w-screen-2xl mx-auto ">

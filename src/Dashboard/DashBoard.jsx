@@ -23,6 +23,7 @@ import { AiFillHome } from "react-icons/ai";
 const DashBoard = () => {
   const { user } = useAuth();
   const [isModerator] = useModerator();
+  // const [isModerator] = useModerator2()
   const [isAdmin] = useAdmin2();
   // const [isAdmin , setIsAdmin] = useState(false)
   // console.log(isAdmin);
