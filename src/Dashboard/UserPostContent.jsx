@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 
-const dataPostContent = ({ data, index,refetch }) => {
+const dataPostContent = ({ data, index, refetch }) => {
   const axiosSecure = useAxiosSecure();
 
   const handleReject = (id) => {
@@ -51,7 +51,7 @@ const dataPostContent = ({ data, index,refetch }) => {
               <tr className="text-inherit">
                 <th>{index + 1}</th>
                 <td className="font-kdam ">{data.product_name}</td>
-                  <td className="font-semibold"><Link to='/features'>Go Feature</Link></td>
+                {/* <td className="font-semibold"><Link to='/features'> Feature</Link></td> */}
 
                 <td>
                   {data.status ? (
