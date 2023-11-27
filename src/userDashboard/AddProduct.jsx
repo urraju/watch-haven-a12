@@ -40,7 +40,7 @@ const AddProduct = () => {
         owner_name: user?.displayName,
         owner_img: user?.photoURL,
       };
-      const product = await axiosSecure.post("/watch", productInfo);
+      const product = await axiosSecure.post("/postProduct", productInfo);
       console.log(product.data);
       if (product.data.insertedId) {
         Swal.fire({

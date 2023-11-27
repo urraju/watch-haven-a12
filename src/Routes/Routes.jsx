@@ -14,6 +14,9 @@ import ReportContent from "../Dashboard/ReportContent";
 import Features from "../Components/Features/Features";
 import AddProduct from "../userDashboard/AddProduct";
 import TrendingProduct from "../Components/TrendingProduct/TrendingProduct";
+import MyProducts from "../userDashboard/MyProducts";
+import PostContent from "../Dashboard/PostContent";
+ 
 
 const router = createBrowserRouter([
   {
@@ -76,6 +79,14 @@ const router = createBrowserRouter([
       {
         path : 'addProduct',
         element : <AddProduct/>
+      },
+      {
+        path : 'myProducts',
+        element : <MyProducts/>
+      },
+      {
+        path : 'postContent',
+        element : <PostContent/>
       },
       {
         path: "allusers",

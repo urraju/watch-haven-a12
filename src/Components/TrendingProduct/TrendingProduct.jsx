@@ -4,7 +4,6 @@ import TrendingCard from "./TrendingCard";
 import TilteContent from "../../shared/titleContent";
 import img from '../../assets/titleImg/headimg.webp'
 import { Link } from "react-router-dom";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsArrow90DegRight } from "react-icons/bs";
 
 const TrendingProduct = () => {

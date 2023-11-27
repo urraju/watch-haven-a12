@@ -17,7 +17,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAdmin2 from "../hooks/useAdmin2";
 import useModerator from "../hooks/useModerator";
-import { MdHome, MdReport, MdReportProblem, MdStars } from "react-icons/md";
+import { MdHome, MdPostAdd, MdReport, MdReportProblem, MdStars } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
 
 const DashBoard = () => {
@@ -79,6 +79,15 @@ const DashBoard = () => {
               </li>
               <li>
                 <NavLink
+                  className="flex  gap-2 items-center uppercase"
+                  to="/DashBoard/postContent"
+                >
+                  <MdPostAdd/>
+                   Post content
+                </NavLink>                         
+              </li>
+              <li>
+                <NavLink
                   className="flex font-roboto  gap-2 items-center uppercase"
                   to="/DashBoard/reportContent"
                 >
@@ -111,7 +120,7 @@ const DashBoard = () => {
               <li>
                 <NavLink
                   className="flex font-roboto   gap-2 items-center uppercase"
-                  to="/DashBoard/myProduct"
+                  to="/DashBoard/myProducts"
                 >
                   <FaBars />
                   My Product

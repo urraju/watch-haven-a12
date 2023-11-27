@@ -80,6 +80,7 @@ const ReviewContent = () => {
             </tbody>
           </table>
         </div>
+        
       </div>
     </div>
   );
