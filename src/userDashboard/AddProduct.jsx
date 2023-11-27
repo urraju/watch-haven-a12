@@ -1,57 +1,124 @@
+import { useState } from "react";
 import HeadingContent from "../shared/HeadingContent";
-import { WithContext as ReactTags } from "react-tag-input";
-
+import useAuth from "../AuthContext/useAuth/useAuth";
+import useAxiosSecure from "../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import { useForm } from "react-hook-form";
+const image_hosting_key = import.meta.env.VITE_IMG_HOSTING;
+const imagebb_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const AddProduct = () => {
+  const axiosPublic = useAxiosPublic();
+  const [tagsArray, setTagsArray] = useState([]);
+  const [linker, setLinker] = useState([]);
+  const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = async (data) => {
+    const arryLink = data.link.split(" ");
+    setLinker(arryLink);
+    const tagsArray = data.tags.split(" ");
+    setTagsArray(tagsArray);
+
+    const imageFile = { image: data.image[0] };
+    const res = await axiosPublic.post(imagebb_hosting_api, imageFile, {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    });
+    console.log(res.data);
+    if (res.data.success) {
+      const productInfo = {
+        product_name: data.productName,
+        product_image: res.data.data.display_url,
+        tags: tagsArray,
+        external_links: linker,
+        vote: 0,
+        description: data.productDes,
+
+        owner_email: user?.email,
+        owner_name: user?.displayName,
+        owner_img: user?.photoURL,
+      };
+      const product = await axiosSecure.post("/watch", productInfo);
+      console.log(product.data);
+      if (product.data.insertedId) {
+        Swal.fire({
+          position: "Successfully Added",
+          icon: "success",
+          title: ` item has been Added`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
+      reset();
+    }
+  };
+  console.log(tagsArray, linker);
+
   return (
     <div className="w-full">
       <HeadingContent heading={"Product"} subHeading={"Add Product"} />
-      <div>
-        <ReactTags
-          tags={['hello']}
-           
-        />
-      </div>
-      <div className="flex w-full   items-center justify-center">
-        <form>
+
+      <div className="flex w-full  mt-10 items-center justify-center">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex  gap-5">
-            <label className="font-kdam">
+            <label className="font-kdam text-gray-500">
               Product Name <br />
               <input
                 className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2 py-2"
                 type="text"
-                placeholder="Product Name"
-                name="productName"
+                {...register("productName", { required: true })}
               />
             </label>
-            <label className="font-kdam">
+            <label className="font-kdam text-gray-500">
               Product Image <br />
               <input
                 className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
                 type="file"
-                name="productimage"
+                {...register("image")}
               />
             </label>
           </div>
           <div className="flex  gap-5">
-            <label className="font-kdam">
-              Product Name <br />
-              <textarea
-                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
-                name="productdes"
-                placeholder="Product Description"
-                id=""
-                cols="30"
-                rows="2"
-              ></textarea>
-            </label>
-            <label className="font-kdam">
-              Product Image <br />
+            <label className="font-kdam text-gray-500 mt-2">
+              tags <br />
               <input
                 className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
-                type="file"
-                name="productimage"
+                type="text"
+                {...register("tags", { required: true })}
               />
             </label>
+
+            <label className="font-kdam text-gray-500 mt-2">
+              Extranal Link
+              <br />
+              <input
+                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
+                type="url"
+                {...register("link")}
+              />
+            </label>
+          </div>
+
+          {/* description  */}
+          <div className="w-full flex items-center justify-center gap-5">
+            <label className="font-kdam text-gray-500 mt-2">
+              Product Description
+              <br />
+              <input
+                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
+                type="text"
+                {...register("productDes")}
+              />
+            </label>
+
+            <button
+              className=" w-full mt-10 border border-yellow-200 rounded lg:w-80  bg-yellow-400 uppercase px-3 py-2"
+              type="submit"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </div>

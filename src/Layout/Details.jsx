@@ -220,8 +220,8 @@ const Details = () => {
       {/* review card  */}
       <div className=" w-full lg:max-w-screen-xl mx-auto mt-20" >
         <Swiper
-          
-          spaceBetween={20}
+          slidesPerView={3}
+          spaceBetween={30}
           freeMode={true}
           pagination={{
             clickable: true,
@@ -230,7 +230,8 @@ const Details = () => {
           className="mySwiper"
         >
           {review.map((item) => (
-            <SwiperSlide className="grid grid-cols-1  p-8 bg-gray-300 gap-2 lg:gap-5 lg:grid-cols-3">
+          <div className="bg-rose-200 p-6 h-72">
+              <SwiperSlide className=" ">
               <div className="border w-max p-2 rounded-xl">
               <img className="w-28 rounded-xl " src={item.photoURL} alt="" />
               </div>
@@ -242,6 +243,7 @@ const Details = () => {
                 </p>
               </div>
             </SwiperSlide>
+          </div>
           ))}
         </Swiper>
       </div>
