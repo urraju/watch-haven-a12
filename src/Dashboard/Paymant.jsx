@@ -1,16 +1,14 @@
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
+// import { Elements } from "@stripe/react-stripe-js";
+// import FormChackOut from "./FormChackOut";
 
-const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT)
-const Paymant = () => {
-    return(
-        <div>
-             <Elements stripe={stripePromise} >
+// const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT)
+// const Paymant = () => {
+//     return(
+//         <div>
+//              <Elements stripe={stripePromise} >
                     
-                    <CheckOut>
-
-                    </CheckOut>
-                </Elements>
-        </div>
-    )}
-export default Paymant;
+//                 </Elements>
+//         </div>
+//     )}
+// export default Paymant;

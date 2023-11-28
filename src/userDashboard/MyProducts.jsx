@@ -30,7 +30,7 @@ const MyProducts = () => {
     confirmButtonText: "Yes, delete it!",
   }).then((result) => {
     if (result.isConfirmed) {
-      axiosSecure.delete(`/myProduct/${id}`).then((res) => {
+      axiosSecure.delete(`/postProduct/${id}`).then((res) => {
         console.log(res.data);
         if (res.data.deletedCount > 0) {
           Swal.fire({

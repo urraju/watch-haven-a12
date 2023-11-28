@@ -111,7 +111,7 @@ const DashBoard = () => {
               <li>
                 <NavLink
                   className="flex font-roboto   gap-2 items-center uppercase"
-                  to="/DashBoard/myProfile"
+                  to="/DashBoard/userProfile"
                 >
                   <FaUser className="text-lg" />
                    My Profile

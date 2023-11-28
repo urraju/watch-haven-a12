@@ -16,6 +16,7 @@ import AddProduct from "../userDashboard/AddProduct";
 import TrendingProduct from "../Components/TrendingProduct/TrendingProduct";
 import MyProducts from "../userDashboard/MyProducts";
 import PostContent from "../Dashboard/PostContent";
+import UserProfile from "../userDashboard/UserProfile";
  
 
 const router = createBrowserRouter([
@@ -84,6 +85,11 @@ const router = createBrowserRouter([
         path : 'myProducts',
         element : <MyProducts/>
       },
+      {
+        path : 'userProfile',
+        element : <UserProfile/>
+      },
+      
       {
         path : 'postContent',
         element : <PostContent/>
