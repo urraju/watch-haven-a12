@@ -1,33 +1,29 @@
 import { useQuery } from "@tanstack/react-query";
-import {
-  FaAmbulance,
-  FaChessRook,
-  FaPooStorm,
-  FaRainbow,
-  FaStar,
-  FaStarAndCrescent,
-  FaUser,
-  FaUsers,
-  FaWallet,
-} from "react-icons/fa";
+import { FaChessRook, FaStar, FaUsers } from "react-icons/fa";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { MdPostAdd } from "react-icons/md";
 import HeadingContent from "../shared/HeadingContent";
-
+import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 const AdminHome = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
-  const { data: stats = [] } = useQuery({
+  const { data: stats = {} } = useQuery({
     queryKey: ["admin-stats"],
     queryFn: async () => {
       const res = await axiosSecure.get("/admin-status");
       return res.data;
     },
   });
+
+  //   custom for the bar chart
+ 
+
+
   return (
     <div>
-        <HeadingContent heading={'Admin Pannel'} subHeading={'All Analytics'}/>
+      <HeadingContent heading={"Admin Pannel"} subHeading={"All Analytics"} />
       <div className="w-full  p-8 gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="bg-gradient-to-r h-40  from-violet-600 items-center justify-center p-8 flex gap-5 rounded-md to-violet-300">
           <FaStar className="text-white text-4xl" />
@@ -57,6 +53,12 @@ const AdminHome = () => {
             <p className="text-white font-semibold text-3xl">{stats.post}</p>
             <h1 className="text-white text-xl font-light">Post product</h1>
           </div>
+        </div>
+      </div>
+      {/* chart create and use part  */}
+      <div>
+        <div>
+          <PieChart data={stats}/>
         </div>
       </div>
     </div>

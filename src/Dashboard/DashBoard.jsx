@@ -1,24 +1,21 @@
 import {
-  FaAddressCard,
+  
   FaBars,
-  FaBook,
+   
   FaEnvelope,
-  FaFileContract,
-  FaHistory,
-  FaHome,
-  FaProcedures,
+   
   FaShoppingCart,
-  FaTasks,
+  
   FaUser,
   FaUsers,
-  FaUtensils,
+   
 } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAdmin2 from "../hooks/useAdmin2";
 import useModerator from "../hooks/useModerator";
 import { MdHome, MdOutlineSubscript, MdOutlineSubscriptions, MdPayments, MdPostAdd, MdReport, MdReportProblem, MdStars, MdSubscriptions } from "react-icons/md";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillAccountBook, AiFillHome } from "react-icons/ai";
 
 const DashBoard = () => {
   const { user } = useAuth();
@@ -93,6 +90,15 @@ const DashBoard = () => {
                 >
                   <MdReportProblem className="text-xl" />
                   Report Content
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="flex font-roboto  gap-2 items-center uppercase"
+                  to="/DashBoard/manageCoupon"
+                >
+                  <AiFillAccountBook className="text-xl" />
+                   Manage Coupon
                 </NavLink>
               </li>
               

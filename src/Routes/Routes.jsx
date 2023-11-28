@@ -15,11 +15,12 @@ import Features from "../Components/Features/Features";
 import AddProduct from "../userDashboard/AddProduct";
 import MyProducts from "../userDashboard/MyProducts";
 import PostContent from "../Dashboard/PostContent";
-import UserProfile from "../userDashboard/Subscription";
 import NotFound from "../Error/NotFound";
 import Subscription from "../userDashboard/Subscription";
 import MyProfile from "../userDashboard/MyProfile";
 import AdminHome from "../Dashboard/AdminHome";
+import UpdateProduct from "../userDashboard/UpdateProduct";
+import ManageCoupn from "../Dashboard/ManageCoupn";
  
 
 const router = createBrowserRouter([
@@ -105,6 +106,14 @@ const router = createBrowserRouter([
       {
         path : 'postContent',
         element : <PostContent/>
+      },
+      {
+        path : 'updateProduct',
+        element : <UpdateProduct/>
+      },
+      {
+        path : 'manageCoupon',
+        element : <ManageCoupn/>
       },
       {
         path: "allusers",

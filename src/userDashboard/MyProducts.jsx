@@ -62,13 +62,13 @@ const MyProducts = () => {
             </thead>
             <tbody>
               {myProduct.map((pro, index) => (
-                <tr key={pro.id}>
+                <tr key={pro._id}>
                   <th>{index + 1}</th>
                   <td className="font-kdam">{pro.product_name}</td>
                   <td>{pro.vote}</td>
 
                   <td>
-                    <Link to={`updateProduct/${pro._id}`}><button>Update</button></Link>
+                    <Link to='/updateProduct'><button>Update</button></Link>
                   </td>
 
                   <td>
