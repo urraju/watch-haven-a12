@@ -68,7 +68,7 @@ const MyProducts = () => {
                   <td>{pro.vote}</td>
 
                   <td>
-                    <button>Update</button>
+                    <Link to={`updateProduct/${pro._id}`}><button>Update</button></Link>
                   </td>
 
                   <td>

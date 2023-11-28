@@ -17,7 +17,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAdmin2 from "../hooks/useAdmin2";
 import useModerator from "../hooks/useModerator";
-import { MdHome, MdPostAdd, MdReport, MdReportProblem, MdStars } from "react-icons/md";
+import { MdHome, MdOutlineSubscript, MdOutlineSubscriptions, MdPayments, MdPostAdd, MdReport, MdReportProblem, MdStars, MdSubscriptions } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
 
 const DashBoard = () => {
@@ -42,15 +42,15 @@ const DashBoard = () => {
   // },[user?.email])
 
   return (
-    <div className="grid w-full p-5 gap-10 justify-evenly  lg:grid-cols-12 max-w-screen-2xl mx-auto">
-      <div className="bg-gradient-to-bl to-yellow- from-yellow-700 rounded-lg p-10 col-span-4 min-h-screen">
+    <div className=" w-full p-2 flex flex-col md:flex-row md:p-5 gap-10 justify-evenly    max-w-screen-2xl mx-auto">
+      <div className="bg-gradient-to-bl to-yellow- from-yellow-700 rounded-lg p-10 md:w-[500px]  h-max md:min-h-screen">
         <div>
           <div className="flex gap-3 items-center mb-5 ">
             <div className="border rounded-full p-2">
               <img className="rounded-full w-20" src={user.photoURL} alt="" />
             </div>
             <div>
-              <p className="text-lg font-kdam text-yellow-900">{user.displayName}</p>
+              <p className="text-lg font-kdam">{user.displayName}</p>
               <p>{user.email}</p>
             </div>
           </div>
@@ -111,7 +111,7 @@ const DashBoard = () => {
               <li>
                 <NavLink
                   className="flex font-roboto   gap-2 items-center uppercase"
-                  to="/DashBoard/userProfile"
+                  to="/DashBoard/myProfile"
                 >
                   <FaUser className="text-lg" />
                    My Profile
@@ -134,6 +134,15 @@ const DashBoard = () => {
                 >
                   <FaShoppingCart className="text-lg"/>
                   Add Product
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="flex font-roboto  gap-2 items-center uppercase"
+                  to="/DashBoard/subscription"
+                >
+                  <MdPayments className="text-lg"/>
+                   Get subscription
                 </NavLink>
               </li>
  
@@ -173,7 +182,7 @@ const DashBoard = () => {
       </div>
       
 
-      <div className=" lg:col-span-8  rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-yellow-500 justify-center flex ">
+      <div className=" md:col-span-8   rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-yellow-500 justify-center flex ">
         <Outlet />
       </div>
 

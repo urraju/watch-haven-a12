@@ -13,16 +13,20 @@ import ReviewContent from "../Dashboard/ReviewContent";
 import ReportContent from "../Dashboard/ReportContent";
 import Features from "../Components/Features/Features";
 import AddProduct from "../userDashboard/AddProduct";
-import TrendingProduct from "../Components/TrendingProduct/TrendingProduct";
 import MyProducts from "../userDashboard/MyProducts";
 import PostContent from "../Dashboard/PostContent";
-import UserProfile from "../userDashboard/UserProfile";
+import UserProfile from "../userDashboard/Subscription";
+import NotFound from "../Error/NotFound";
+import Subscription from "../userDashboard/Subscription";
+import MyProfile from "../userDashboard/MyProfile";
+import AdminHome from "../Dashboard/AdminHome";
  
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement : <NotFound/>,
     children: [
       {
         path: "/",
@@ -86,8 +90,16 @@ const router = createBrowserRouter([
         element : <MyProducts/>
       },
       {
-        path : 'userProfile',
-        element : <UserProfile/>
+        path : 'subscription',
+        element : <Subscription/>
+      },
+      {
+        path : 'myProfile',
+        element : <MyProfile/>
+      },
+      {
+        path : 'adminHome',
+        element : <AdminHome/>
       },
       
       {

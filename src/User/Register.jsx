@@ -64,13 +64,13 @@ const Register = () => {
    
    
   return (
-    <div className="authantication py-24 h-screen">
-      <div className=" max-w-7xl authantication rounded-xl shadow-lg mx-auto mt-20">
-        <div className="flex flex-col md:flex-row-reverse items-center justify-center md:gap-20">
+    <div className="md:py-10">
+      <div className=" max-w-7xl mx-auto mt-20">
+        <div className="flex flex-col p-3 md:flex-row-reverse items-center justify-center md:gap-20">
           <div>
-            <img src={logo} alt="" />
+            <img className="hidden md:block" src={logo} alt="" />
           </div>
-          <div className="border font-hebo w-full md:w-1/3 p-10">
+          <div className="border  rounded-lg border-yellow-300 font-hebo w-full md:w-1/3 p-10">
             <h1 className="text-center font-semibold text-3xl">Sign Up</h1>
             <div className="mt-8">
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -126,7 +126,7 @@ const Register = () => {
                 </label>
                 <button
                   type="submit"
-                  className="bg-yellow-400 text-white w-full py-2 rounded"
+                  className="bg-yellow-400 uppercase text-white w-full py-2 rounded"
                 >
                   Sign Up
                 </button>

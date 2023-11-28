@@ -16,38 +16,36 @@ import { useQuery } from "@tanstack/react-query";
    const [data , setData] = useState(watch)
    const axiosPublic = useAxiosPublic();
 
+   useEffect(() => {
+    fetch("http://localhost:2000/watchCount")
+      .then((res) => res.json())
+      .then((count) => setcount(count.count));
+  }, []);
    
-  const {
-    data: countWatch = [],
-    refetch : refether
+  // const {
+  //   data: countWatch = [],
+  //   refetch : refether
      
-  } = useQuery({
-    queryKey: ["countWatch", count],
-    queryFn: async () => {
-      const res = await axiosPublic.get(`/watchCount`);
-      setcount(res.data.count)
-      return res.data;
-    },
-  });
-  console.log(countWatch);
+  // } = useQuery({
+  //   queryKey: ["countWatch", count],
+  //   queryFn: async () => {
+  //     const res = await axiosPublic.get(`/watchCount`);
+  //     setcount(res.data.count)
+  //     return res.data;
+  //   },
+  // });
+  // console.log(countWatch);
   
   const numberOfPage = (Math.ceil(count / perPage))
   const pages = [...Array(numberOfPage).keys()];
 
-  const handlePage = (e) => {
-    const valu = parseInt(e.target.value)
-    console.log(valu);
-    setPerPage(valu)
-    setCurrentPage(0)
-    refether()
-  }
 
   const {
     data: watcher = [],
     refetch,
     isPending: loading,
   } = useQuery({
-    queryKey: ["watcher", search],
+    queryKey: ["watcher", search,perPage,currentPage],
     queryFn: async () => {
       const res = await axiosPublic.get(`/watch?search=${search}&page=${currentPage}&size=${perPage}`);
       setData(res.data)
@@ -59,8 +57,18 @@ import { useQuery } from "@tanstack/react-query";
          const val = e.target.search.value
          setSearch(val)
          console.log(val);
+         setCurrentPage(0)
+         setPerPage(20)
          refetch()
     }
+    
+  const handlePage = (e) => {
+    const valu = parseInt(e.target.value)
+    console.log(valu);
+    setPerPage(valu)
+    setCurrentPage(0)
+    refetch()
+  }
 
   
  

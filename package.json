@@ -28,6 +28,7 @@
     "react-router-dom": "^6.20.0",
     "react-simple-captcha": "^9.3.0",
     "react-tag-input": "^6.8.1",
+    "recharts": "^2.10.1",
     "strip-js": "^1.2.0",
     "styled-components": "^6.1.1",
     "sweetalert2": "^11.10.1",

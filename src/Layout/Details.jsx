@@ -16,6 +16,8 @@ import { FreeMode, Pagination } from "swiper/modules";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { FaStar } from "react-icons/fa";
+import { MdReport } from "react-icons/md";
 
 const Details = () => {
   const { user } = useAuth();
@@ -96,17 +98,17 @@ const Details = () => {
   const { data: review = [] } = useQuery({
     queryKey: ["review"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/review");
+      const res = await axiosSecure.get("/review");
       return res.data;
     },
   });
   console.log(review);
   return (
-    <div className="p-5">
+    <div className=" p-2 md:p-5">
       <TilteContent heading={"Product Details"} img={img} />
-      <div className="bg-gray-300 max-w-screen-2xl mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
+      <div className=" bg-gradient-to-tl rounded  from-green-100 max-w-screen-2xl mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
         <img className="w-[400px]" src={product_image} alt="" />
-        <div className="space-y-1">
+        <div className="space-y-1  text-black">
           <p className="font-kdam font-semibold">
             <span className="font-kdam font-normal">Name : </span>
             {product_name}
@@ -122,9 +124,9 @@ const Details = () => {
 
           <p className="font-kdam">
             Tangs :{" "}
-            <span>
+            <span className="">
               {tags.map((item) => (
-                <a className="mr-2 font-josefin uppercase py-1 text-sm border px-2">
+                <a className="mr-2 font-sans  text-sm border px-2">
                   {item}
                 </a>
               ))}
@@ -138,25 +140,25 @@ const Details = () => {
             <span className="font-kdam mr-2">Buy Product : </span>
             {external_links.map((link, index) => (
               <a
-                className="  px-4 text-blue-500 bg-blue-100 hover:underline  rounded mr-2"
+                className="  px-4 text-blue-500 bg-violet-200 border hover:underline  rounded mr-2"
                 href={link}
               >
                 Visit {index + 1}
               </a>
             ))}
           </div>
-          <div className="flex gap-2 mt-4">
+          <div className="flex gap-2 ">
             <button
               onClick={handleReport}
-              className="bg-red-700 px-3 text-white font-roboto font-light "
+              className="bg-red-700 px-3 flex items-center gap-2 text-white font-roboto font-light "
             >
-              Report
+              Report <MdReport/>
             </button>
             <button
               onClick={handlePost}
-              className="bg-success px-3 text-white font-roboto font-light "
+              className="bg-success px-3 flex gap-1 items-center    text-white font-roboto font-light "
             >
-              Review
+              Review <FaStar/>
             </button>
           </div>
         </div>
@@ -220,7 +222,7 @@ const Details = () => {
       {/* review card  */}
       <div className=" w-full lg:max-w-screen-xl mx-auto mt-20" >
         <Swiper
-          slidesPerView={3}
+          slidesPerView={2}
           spaceBetween={30}
           freeMode={true}
           pagination={{
@@ -229,7 +231,8 @@ const Details = () => {
           modules={[FreeMode, Pagination]}
           className="mySwiper"
         >
-          {review.map((item) => (
+         <div>
+           {review.map((item) => (
           <div className="bg-rose-200 p-6 h-72">
               <SwiperSlide className=" ">
               <div className="border w-max p-2 rounded-xl">
@@ -237,7 +240,7 @@ const Details = () => {
               </div>
               <div>
                 <p className="font-kdam text-xl mt-1">{item.name}</p>
-                <p>{item.comment}</p>
+                <p className="text-sm text-gray-500">{item.comment}</p>
                 <p>
                   <Rating  style={{ maxWidth: 100,  }} value={item.rating} readOnly />
                 </p>
@@ -245,6 +248,7 @@ const Details = () => {
             </SwiperSlide>
           </div>
           ))}
+         </div>
         </Swiper>
       </div>
     </div>

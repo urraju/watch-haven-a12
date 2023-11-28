@@ -12,7 +12,7 @@ import FormChackOut from "../Dashboard/FormChackOut";
 
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT)
 
-const UserProfile = () => {
+const Subscription = () => {
   const [paymant1, setPaymant1] = useState(500);
   const [paymant2, setPaymant2] = useState(1000);
   const [paymant3, setPaymant3] = useState(1500);
@@ -27,12 +27,12 @@ const UserProfile = () => {
     document.getElementById("my_modal_3").showModal()
   };
   return (
-    <div>
+    <div className="w-full">
         
       <div>
-        <img className="w-96 mx-auto" src={paymant} alt="" />
+        <img className="  mx-auto" src={paymant} alt="" />
         <div className="mt-3 flex flex-col justify-center items-center">
-          <p className="text-lg uppercase font-kdam mb-4">
+          <p className="text-lg uppercase text-center font-kdam mb-4">
             If You Post your more product you can do
           </p>
           <Link
@@ -91,4 +91,4 @@ const UserProfile = () => {
     </div>
   );
 };
-export default UserProfile;
+export default Subscription;

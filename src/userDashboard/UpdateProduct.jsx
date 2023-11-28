@@ -7,7 +7,7 @@ import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useForm } from "react-hook-form";
 const image_hosting_key = import.meta.env.VITE_IMG_HOSTING;
 const imagebb_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
-const AddProduct = () => {
+const UpdateProduct = () => {
   const axiosPublic = useAxiosPublic();
   const [tagsArray, setTagsArray] = useState([]);
   const [linker, setLinker] = useState([]);
@@ -125,4 +125,4 @@ const AddProduct = () => {
     </div>
   );
 };
-export default AddProduct;
+export default UpdateProduct;
