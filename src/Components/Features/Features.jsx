@@ -10,7 +10,7 @@ const Features = () => {
         <div className="p-5">
             <TilteContent img={img} heading={'Features Pruducts'}/>
              <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-10">
-                {featureData.slice(0,12).map(item => <FeaturesCard key={item._id} data={item} refetch={refetch}/>)}
+                {featureData.map(item => <FeaturesCard key={item._id} data={item} refetch={refetch}/>)}
              </div>
         </div>
     )}

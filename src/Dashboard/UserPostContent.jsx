@@ -41,6 +41,23 @@ const dataPostContent = ({ data, index, refetch }) => {
       }
     });
   };
+  //  add features product
+  const handleFeature = (id) => {
+    axiosSecure.put(`/postProduct/addFeature/${id}`)
+    .then(res => {
+      console.log(res.data);
+      if(res.data.modifiedCount > 0)  {
+        Swal.fire({
+          position: "Successfully Added",
+          icon: "success",
+          title: ` Feature has been Added`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+        refetch()
+      }
+    })
+  }
 
   return (
     <div>
@@ -51,8 +68,8 @@ const dataPostContent = ({ data, index, refetch }) => {
               <tr className="text-inherit">
                 <th>{index + 1}</th>
                 <td className="font-kdam   text-center w-52">{data.product_name}</td>
-                {/* <td className="font-semibold"><Link to='/features'> Feature</Link></td> */}
-                <td><button className=" w-52">Make Features</button></td>
+                
+                <td> {data.featured === true ? <><button onClick={() => handleFeature(data._id)} className=" w-52 text-green-500 font-bold">Featured</button> </> : <><button onClick={() => handleFeature(data._id)} className="w-52 font-bold text-blue-500">Add Feature</button></>} </td>
                 <td>
                   {data.status ? (
                     <button disabled className="text-success  w-52 text-left font-bold">
