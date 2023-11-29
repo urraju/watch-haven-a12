@@ -110,7 +110,9 @@ const router = createBrowserRouter([
       },
       {
         path : 'editProduct/:id',
-        element : <UpdateProduct/>
+        element : <UpdateProduct/>,
+        loader: ({ params }) =>
+        fetch(`http://localhost:2000/postProduct/${params.id}`),
       },
       {
         path : 'manageCoupon',

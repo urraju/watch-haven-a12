@@ -5,6 +5,7 @@ import useAuth from "../AuthContext/useAuth/useAuth";
 import HeadingContent from "../shared/HeadingContent";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { MdDelete, MdEdit, MdSystemUpdate, MdUpdate } from "react-icons/md";
 
 const MyProducts = () => {
   const axiosSecure = useAxiosSecure();
@@ -68,11 +69,11 @@ const MyProducts = () => {
                   <td>{pro.vote}</td>
 
                   <td>
-                    <Link to={`/DashBoard/editProduct/${pro._id}`}><button>Update</button></Link>
+                    <Link to={`/DashBoard/editProduct/${pro._id}`}><button  className=" bg-green-500 bg-opacity-25 text-green-600 p-2 text-lg rounded-full"><MdEdit/></button></Link>
                   </td>
 
                   <td>
-                    <button onClick={() => handleDelete(pro._id)}>Delete</button>
+                    <button className="text-lg bg-red-500 bg-opacity-25 text-red-600 p-2 rounded-full" onClick={() => handleDelete(pro._id)}><MdDelete/></button>
                   </td>
                 </tr>
               ))}

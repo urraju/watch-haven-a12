@@ -50,22 +50,22 @@ const dataPostContent = ({ data, index, refetch }) => {
             <tbody>
               <tr className="text-inherit">
                 <th>{index + 1}</th>
-                <td className="font-kdam ">{data.product_name}</td>
+                <td className="font-kdam   text-center w-52">{data.product_name}</td>
                 {/* <td className="font-semibold"><Link to='/features'> Feature</Link></td> */}
-
+                <td><button className=" w-52">Make Features</button></td>
                 <td>
                   {data.status ? (
-                    <button disabled className="text-success font-bold">
+                    <button disabled className="text-success  w-52 text-left font-bold">
                       Accepted
                     </button>
                   ) : data.status2 ? (
-                    <button disabled className="font-bebas font-bold">
+                    <button disabled className="font-bebas text-left   w-52 font-bold">
                       Pending
                     </button>
                   ) : (
                     <button
                       onClick={() => handleAccept(data._id)}
-                      className="font-bebas font-bold"
+                      className="font-bebas text-left  w-52 font-bold"
                     >
                       Pending
                     </button>
