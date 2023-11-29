@@ -16,7 +16,8 @@ const Subscription = () => {
   const [paymant1, setPaymant1] = useState(500);
   const [paymant2, setPaymant2] = useState(1000);
   const [paymant3, setPaymant3] = useState(1500);
-
+  const [currentAmount , setCurrentAmount] = useState(0)
+  
   const handlePaymant1 = () => {
     document.getElementById("my_modal_3").showModal()
   };

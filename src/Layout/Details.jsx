@@ -7,7 +7,6 @@ import useAxiosPublic from "../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
-import ReviewCard from "./ReviewCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -16,14 +15,19 @@ import { FreeMode, Pagination } from "swiper/modules";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
-import { FaStar } from "react-icons/fa";
+import { FaArrowUp, FaStar, FaVoteYea } from "react-icons/fa";
 import { MdReport } from "react-icons/md";
+import { useState } from "react";
+import { useEffect } from "react";
+import useQuerye from "../hooks/useQuerye";
+import useAllData from "../hooks/useAllData";
 
 const Details = () => {
   const { user } = useAuth();
   const data = useLoaderData();
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
+  const [refetch] = useAllData()
   console.log(data);
   const {
     _id,
@@ -102,18 +106,38 @@ const Details = () => {
       return res.data;
     },
   });
+
+  const [voter ,setVoter] = useState(vote)
+  const [votes, setVotes] = useState([]);  
+  useEffect(() => {
+    const arr = new Array(voter);
+    arr.fill(+1);
+    setVotes(arr);
+  }, [voter]);
+    const handleVote = () => {
+        
+        axiosPublic.put(`/watch/updateVote?id2=${_id}`)
+        .then((res) => {
+          if(res.data.modifiedCount > 0){
+            setVoter(voter + 1);
+            refetch()
+
+          } 
+          });
+    }
+
   console.log(review);
   return (
     <div className=" p-2 md:p-5">
       <TilteContent heading={"Product Details"} img={img} />
       <div className=" bg-gradient-to-tl rounded  from-green-100 max-w-screen-2xl mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
         <img className="w-[400px]" src={product_image} alt="" />
-        <div className="space-y-1  text-black">
+        <div className=" space-y-2 text-black">
           <p className="font-kdam font-semibold">
             <span className="font-kdam font-normal">Name : </span>
             {product_name}
           </p>
-          <p className="font-roboto  ">
+          <p className="font-roboto   ">
             <span className="font-kdam font-normal">Description : </span>
             {description}
           </p>
@@ -132,15 +156,28 @@ const Details = () => {
               ))}
             </span>
           </p>
-          <button className="font-josefin text-lg text-yellow-800 ">
-            <span className="font-kdam">Vote : </span>
-            {vote}
-          </button>
+          
+          {/* vote part  */}
+
+
+          <div className="flex gap-5 mt-2 items-center">
+                 
+                 {user ? <button  onClick={handleVote} className="bg-white border border-yellow-400  text-black  px-2 flex items-center font-mono uppercase  rounded-lg p-1 "><FaArrowUp className="text-md font-light text-yellow-500"/></button> : 
+
+                 <button disabled onClick={handleVote} className="bg-white border border-yellow-400 disabled:text-gray-300 disabled:border-none text-black px-2 flex items-center font-mono uppercase  rounded-lg "> vote <FaArrowUp className="text-md font-light text-yellow-500"/></button>}
+                   
+                   <button className="flex  items-center gap-2 border px-3 bg-yellow-300 rounded-full text-black text-"><FaVoteYea/>{vote}</button>
+                  </div>
+
+
+
+
+
           <div className=" mb-3 ">
             <span className="font-kdam mr-2">Buy Product : </span>
             {external_links.map((link, index) => (
               <a
-                className="  px-4 text-blue-500 bg-violet-200 border hover:underline  rounded mr-2"
+                className="  px-4 text-blue-500 bg-green-100 border hover:underline  rounded mr-2"
                 href={link}
               >
                 Visit {index + 1}

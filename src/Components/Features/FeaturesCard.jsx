@@ -8,7 +8,7 @@ import useAuth from "../../AuthContext/useAuth/useAuth";
 const FeaturesCard = ({data,refetch}) => {
     const axiosPublic = useAxiosPublic()
     const {user} = useAuth()
-    const {_id,product_name,product_image,vote,tags,owner_email,date,status,description,external_links,product_id,featured} = data
+    const {_id,product_name,product_image,vote,tags } = data
     const [voter ,setVoter] = useState(vote)
     const [votes, setVotes] = useState([]);
     
@@ -18,13 +18,7 @@ const FeaturesCard = ({data,refetch}) => {
     setVotes(arr);
   }, [voter]);
     const handleVote = () => {
-        // fetch(`http://localhost:2000/watch/update?id=${_id}`, {
-        //   method: "PATCH",
-
-        //   credentials: "include",
-        // }).then((res) => {
-        //   setVoter(voter + 1);
-        // });
+        
         axiosPublic.patch(`/watch/update?id=${_id}`)
         .then((res) => {
           if(res.data.modifiedCount > 0){
