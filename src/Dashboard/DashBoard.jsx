@@ -14,7 +14,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAdmin2 from "../hooks/useAdmin2";
 import useModerator from "../hooks/useModerator";
-import { MdHome, MdOutlineSubscript, MdOutlineSubscriptions, MdPayments, MdPostAdd, MdReport, MdReportProblem, MdStars, MdSubscriptions } from "react-icons/md";
+import { MdHome, MdOutlineSubscript, MdOutlineSubscriptions, MdPayments, MdPostAdd, MdReport, MdReportProblem, MdReviews, MdStars, MdSubscriptions } from "react-icons/md";
 import { AiFillAccountBook, AiFillHome } from "react-icons/ai";
 
 const DashBoard = () => {
@@ -54,7 +54,7 @@ const DashBoard = () => {
         </div> 
           
         <ul className="flex flex-col gap-4">
-          {isAdmin  || isModerator  ? (
+          {isAdmin  ? (
             <>
               <li>
                 <NavLink
@@ -71,27 +71,10 @@ const DashBoard = () => {
                   to="/DashBoard/reviewContent"
                 >
                   <MdStars/>
-                  Review Content
+                  User Review Content
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  className="flex  gap-2 items-center uppercase"
-                  to="/DashBoard/postContent"
-                >
-                  <MdPostAdd/>
-                   Post content
-                </NavLink>                         
-              </li>
-              <li>
-                <NavLink
-                  className="flex font-roboto  gap-2 items-center uppercase"
-                  to="/DashBoard/reportContent"
-                >
-                  <MdReportProblem className="text-xl" />
-                  Report Content
-                </NavLink>
-              </li>
+              
               <li>
                 <NavLink
                   className="flex font-roboto  gap-2 items-center uppercase"
@@ -112,7 +95,35 @@ const DashBoard = () => {
                 </NavLink>
               </li>
             </>
-          ) : (
+          ) : isModerator ? <>
+             <li>
+                <NavLink
+                  className="flex font-roboto gap-2 items-center uppercase"
+                  to="/DashBoard/moderatorHome"
+                >
+                  <AiFillHome className="text-lg" />
+                  { isModerator ? 'Moderator Home' : ''}
+                </NavLink>
+              </li>
+          <li>
+                <NavLink
+                  className="flex  gap-2 items-center uppercase"
+                  to="/DashBoard/postContent"
+                >
+                  <MdReviews/>
+                   Review content
+                </NavLink>                         
+              </li>
+              <li>
+                <NavLink
+                  className="flex font-roboto  gap-2 items-center uppercase"
+                  to="/DashBoard/reportContent"
+                >
+                  <MdReportProblem className="text-xl" />
+                  Report Content
+                </NavLink>
+              </li>
+          </> : (
             <>
               <li>
                 <NavLink
@@ -188,7 +199,7 @@ const DashBoard = () => {
       </div>
       
 
-      <div className=" md:col-span-8   rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-yellow-500 justify-center flex ">
+      <div className=" md:col-span-8   rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-sky-100  justify-center flex ">
         <Outlet />
       </div>
 

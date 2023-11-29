@@ -68,7 +68,7 @@ const MyProducts = () => {
                   <td>{pro.vote}</td>
 
                   <td>
-                    <Link to='/updateProduct'><button>Update</button></Link>
+                    <Link to={`/DashBoard/editProduct/${pro._id}`}><button>Update</button></Link>
                   </td>
 
                   <td>

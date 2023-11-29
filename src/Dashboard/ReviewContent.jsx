@@ -38,7 +38,7 @@ const ReviewContent = () => {
           Swal.fire({
             position: "Successfully Added",
             icon: "success",
-            title: `Accecpted`,
+            title: `Rejected`,
             showConfirmButton: false,
             timer: 1500
           });

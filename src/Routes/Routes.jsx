@@ -21,6 +21,7 @@ import MyProfile from "../userDashboard/MyProfile";
 import AdminHome from "../Dashboard/AdminHome";
 import UpdateProduct from "../userDashboard/UpdateProduct";
 import ManageCoupn from "../Dashboard/ManageCoupn";
+import CreateCoupon from "../Dashboard/CreateCoupon";
  
 
 const router = createBrowserRouter([
@@ -108,12 +109,18 @@ const router = createBrowserRouter([
         element : <PostContent/>
       },
       {
-        path : 'updateProduct',
+        path : 'editProduct/:id',
         element : <UpdateProduct/>
       },
       {
         path : 'manageCoupon',
         element : <ManageCoupn/>
+      },
+      {
+        path : 'createCoupon/:id',
+        element : <CreateCoupon/>,
+        loader: ({ params }) =>
+        fetch(`http://localhost:2000/coupon/${params.id}`),
       },
       {
         path: "allusers",

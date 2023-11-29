@@ -60,41 +60,41 @@ const AddProduct = () => {
     <div className="w-full">
       <HeadingContent heading={"Product"} subHeading={"Add Product"} />
 
-      <div className="flex w-full md:px-20 mt-10 items-center justify-center">
+      <div className="flex w-full md:px-20 mt-10  items-center justify-center">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="md:flex  gap-5">
-            <label className="font-kdam text-gray-500">
+            <label className="font-mono text-lg  uppercase text-gray-700">
               Product Name <br />
               <input
-                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2 py-2"
+                className="w-full placeholder:font-roboto   border font-roboto outline-none border-gray-300 lg:w-80 rounded px-3 mt-2 py-2"
                 type="text"
                 {...register("productName", { required: true })}
               />
             </label>
-            <label className="font-kdam text-gray-500">
+            <label className="font-mono text-lg  uppercase text-gray-700">
               Product Image <br />
               <input
-                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
+                className="w-full placeholder:font-roboto  border-gray-300  border font-roboto outline-none  lg:w-80 rounded px-3 mt-2  py-2"
                 type="file"
                 {...register("image")}
               />
             </label>
           </div>
           <div className=" md:flex  gap-5">
-            <label className="font-kdam text-gray-500 mt-2">
+            <label className="font-mono text-lg  uppercase text-gray-700 mt-2">
               tags <br />
               <input
-                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
+                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-gray-300 lg:w-80 rounded px-3 mt-2  py-2"
                 type="text"
                 {...register("tags", { required: true })}
               />
             </label>
 
-            <label className="font-kdam text-gray-500 mt-2">
+            <label className="font-mono text-lg  uppercase text-gray-700 mt-2">
               Extranal Link
               <br />
               <input
-                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
+                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-gray-300 lg:w-80 rounded px-3 mt-2  py-2"
                 type="url"
                 {...register("link")}
               />
@@ -103,11 +103,11 @@ const AddProduct = () => {
 
           {/* description  */}
           <div className="w-full md:flex items-center justify-center gap-5">
-            <label className="font-kdam text-gray-500 mt-2">
+            <label className="font-mono text-lg  uppercase text-gray-700 mt-2">
               Product Description
               <br />
               <input
-                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-white lg:w-80 rounded px-3 mt-2  py-2"
+                className="w-full placeholder:font-roboto  backdrop-blur bg-white/10 border font-roboto outline-none border-gray-300 lg:w-80 rounded px-3 mt-2  py-2"
                 type="text"
                 {...register("productDes")}
               />
