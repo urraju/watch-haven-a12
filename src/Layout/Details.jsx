@@ -260,26 +260,40 @@ const Details = () => {
       {/* review card  */}
       <div className=" w-full lg:max-w-screen-xl mx-auto mt-20" >
         <Swiper
-          slidesPerView={2}
+           
           spaceBetween={30}
           freeMode={true}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
           }}
           modules={[FreeMode, Pagination]}
           className="mySwiper"
         >
          <div>
            {review.map((item) => (
-          <div className="bg-rose-200 p-6 h-72">
-              <SwiperSlide className=" ">
-              <div className="border w-max p-2 rounded-xl">
+          <div className="bg-rose-200 p-6 ">
+              <SwiperSlide className=" bg-blue-100 border-l-2 border-cyan-300 rounded-xl mb-10 h-80  p-4  ">
+              <div className="border w-max p-2 border-cyan-400 rounded-xl">
               <img className="w-28 rounded-xl " src={item.photoURL} alt="" />
               </div>
               <div>
                 <p className="font-kdam text-xl mt-1">{item.name}</p>
                 <p className="text-sm text-gray-500">{item.comment}</p>
-                <p>
+                <p className="mt-2">
                   <Rating  style={{ maxWidth: 100,  }} value={item.rating} readOnly />
                 </p>
               </div>

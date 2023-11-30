@@ -21,18 +21,33 @@ const DisplayCoupon = () => {
     <div className=" mt-10 mb-20 max-w-screen-2xl mx-auto">
       <TilteContent heading={"use coupon"} img={img} />
       <Swiper
-        slidesPerView={5}
-        spaceBetween={20}
+       
+         
         pagination={{
           clickable: true,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
+
         modules={[Pagination]}
         className="mySwiper"
         
       >
-        <div className="p-2 grid grid-cols-1  md:p-5xcx ">
+        <div className="p-2  grid grid-cols-1  md:p-5xcx ">
           {coupon.map((item) => (
-            <SwiperSlide className="relative mb-10 mt-16">
+            <SwiperSlide className="relative mb-10 px-4 mt-16">
               <Link to='/dashboard/subscription'>
                 <div className=" bg-gradient-to-br border border-sky-300 rounded-2xl to-sky-300 from-sky-100 h-40 p-5">
                   <p className="text-lg uppercase text-center bg-rose-400 w-max mx-auto px-5 rounded text-white font-mono">
