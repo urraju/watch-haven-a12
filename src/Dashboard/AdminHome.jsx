@@ -5,6 +5,7 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 import { MdPostAdd } from "react-icons/md";
 import HeadingContent from "../shared/HeadingContent";
 import { Chart } from "react-google-charts";
+import HelmetUse from "../shared/HelmetUse";
 const AdminHome = () => {
   const axiosSecure = useAxiosSecure();
   const { data: stats = [] } = useQuery({
@@ -30,6 +31,7 @@ const AdminHome = () => {
 
   return (
     <div>
+      <HelmetUse helmet={'Admin Home'}/>
       <HeadingContent heading={"Admin Pannel"} subHeading={"All Analytics"} />
       <div className="w-full  p-8 gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="bg-gradient-to-r h-40  from-violet-600 items-center justify-center p-8 flex gap-5 rounded-md to-violet-300">

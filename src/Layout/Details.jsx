@@ -19,8 +19,8 @@ import { FaArrowUp, FaStar, FaVoteYea } from "react-icons/fa";
 import { MdReport } from "react-icons/md";
 import { useState } from "react";
 import { useEffect } from "react";
-import useQuerye from "../hooks/useQuerye";
 import useAllData from "../hooks/useAllData";
+import HelmetUse from "../shared/HelmetUse";
 
 const Details = () => {
   const { user } = useAuth();
@@ -129,8 +129,9 @@ const Details = () => {
   console.log(review);
   return (
     <div className=" p-2 md:p-5">
+      <HelmetUse helmet={'Details || Page'}/>
       <TilteContent heading={"Product Details"} img={img} />
-      <div className=" bg-gradient-to-tl rounded  from-green-100 max-w-screen-2xl mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
+      <div className=" bg-gradient-to-tl rounded  from-gray-100 max-w-screen-2xl mx-auto p-10 flex flex-col md:flex-row justify-around items-center">
         <img className="w-[400px]" src={product_image} alt="" />
         <div className=" space-y-2 text-black">
           <p className="font-kdam font-semibold">

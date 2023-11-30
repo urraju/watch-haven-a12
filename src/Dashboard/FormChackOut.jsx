@@ -12,7 +12,7 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import { useEffect } from "react";
 import moment from "moment/moment";
-const FormChackOut = ({paymant1, paymant2, paymant3}) => {
+const FormChackOut = ({paymant1}) => {
   const [error, setError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
   const [transactionId, setTransactionId] = useState("");

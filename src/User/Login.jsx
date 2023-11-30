@@ -10,6 +10,7 @@ import {
 } from "react-simple-captcha";
 import SocialLogin from "../Components/SocialLogin/SocialLoign";
 import useAuth from "../AuthContext/useAuth/useAuth";
+import HelmetUse from "../shared/HelmetUse";
 
 const Login = () => {
   const location = useLocation();
@@ -29,9 +30,10 @@ const Login = () => {
 
   return (
     <div className="md:py-10 ">
+      <HelmetUse helmet={'Login'}/>
       <div className=" rounded-xl max-w-7xl mx-auto">
         <div className="flex flex-col p-3  md:flex-row items-center justify-center gap-20">
-          <div >
+          <div>
             <img className="w-[500px] hidden md:block" src={logo} alt="" />
           </div>
           <div className="border w-full rounded-lg border-yellow-300 font-hebo md:w-1/3 p-10">

@@ -10,7 +10,7 @@ import slider6 from '../../assets/banner/banner6.jpg'
  
 const Banner = () => {
     return(
-        <div className="max-w-screen-2xl px-5 mx-auto">
+        <div className="max-w-screen-2xl px-1 md:px-5 mx-auto">
                <Carousel infiniteLoop={Boolean} dynamicHeight={Boolean} autoPlay={Boolean}   >
                 <div>
                     <img className="rounded-lg bg-cover   bg-no-repeat" src={slider1} />

@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import SocialLogin from "../Components/SocialLogin/SocialLoign";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import HelmetUse from "../shared/HelmetUse";
 const Register = () => {
   const location = useLocation()
   const navigate = useNavigate()
@@ -65,6 +66,7 @@ const Register = () => {
    
   return (
     <div className="md:py-10">
+      <HelmetUse helmet={'Register'}/>
       <div className=" max-w-7xl mx-auto mt-20">
         <div className="flex flex-col p-3 md:flex-row-reverse items-center justify-center md:gap-20">
           <div>

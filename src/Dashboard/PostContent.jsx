@@ -34,7 +34,8 @@ const PostContent = () => {
               <tr className="font-kdam ">
                 <th className="rounded-tl-lg">No</th>
                 <th >Product Name</th>
-                <th>Feature</th>
+                <th> Add Feature</th>
+                <th>Veiw Details</th>
                 <th>Accept</th>
                 <th className="rounded-tr-lg">Reject</th>
               </tr>

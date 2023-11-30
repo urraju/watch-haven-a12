@@ -23,7 +23,7 @@ const TrendingProduct = () => {
  
      
     return(
-        <div className="mt-14 p-5">
+        <div className=" p-1 mt-14 md:p-5">
             <TilteContent img={img} heading={'Trending Product'}/>
             <div className=" mt-8 bg-yellow-400 px-4 w-max mx-auto text-gray-700 py-1 rounded font-montserrat flex items-center justify-center">
                 <button onClick={handleSort}>Sort vote</button>

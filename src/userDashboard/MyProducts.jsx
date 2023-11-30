@@ -6,6 +6,7 @@ import HeadingContent from "../shared/HeadingContent";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { MdDelete, MdEdit, MdSystemUpdate, MdUpdate } from "react-icons/md";
+import HelmetUse from "../shared/HelmetUse";
 
 const MyProducts = () => {
   const axiosSecure = useAxiosSecure();
@@ -47,6 +48,7 @@ const MyProducts = () => {
 }
   return (
     <div className="w-full">
+      <HelmetUse helmet={'My Products'}/>
       <HeadingContent heading={"product"} subHeading={"My products"} />
       <div className="px-32 mt-10">
         <div className="overflow-x-auto">

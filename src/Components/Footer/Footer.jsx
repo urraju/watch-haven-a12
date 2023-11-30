@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="grid grid-flow-col gap-4"></div>
         </nav>
         <nav>
-          <header className="footer-title flex border-b ">Online Bookin And Follow Social</header>
+          <header className="footer-title flex border-b ">Online Buy And Follow Social</header>
 
           <div className="grid text-lg grid-flow-col gap-4">
             <FaFacebook />
@@ -47,7 +47,7 @@ const Footer = () => {
             <FaYoutube />
           </div>
           <div>
-            <img src={logo} alt="" />
+            <img className="w-52" src={logo} alt="" />
           </div>
         </nav>
       </footer>

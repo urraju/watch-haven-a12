@@ -22,13 +22,13 @@ import AdminHome from "../Dashboard/AdminHome";
 import UpdateProduct from "../userDashboard/UpdateProduct";
 import ManageCoupn from "../Dashboard/ManageCoupn";
 import CreateCoupon from "../Dashboard/CreateCoupon";
- 
+import PostProductDetails from "../Dashboard/PostProductDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement : <NotFound/>,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -38,10 +38,7 @@ const router = createBrowserRouter([
         path: "features",
         element: <Features />,
       },
-      // {
-      //   path: "trandingProduct",
-      //   element: <TrendingProduct />,
-      // },
+      
       {
         path: "products",
         element: <Products />,
@@ -76,53 +73,59 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path : 'reviewContent',
-        element : <ReviewContent/>
+        path: "reviewContent",
+        element: <ReviewContent />,
       },
       {
-        path : 'reportContent',
-        element : <ReportContent/>
+        path: "reportContent",
+        element: <ReportContent />,
       },
       {
-        path : 'addProduct',
-        element : <AddProduct/>
+        path: "addProduct",
+        element: <AddProduct />,
       },
       {
-        path : 'myProducts',
-        element : <MyProducts/>
+        path: "myProducts",
+        element: <MyProducts />,
       },
       {
-        path : 'subscription',
-        element : <Subscription/>
+        path: "subscription",
+        element: <Subscription />,
       },
       {
-        path : 'myProfile',
-        element : <MyProfile/>
+        path: "myProfile",
+        element: <MyProfile />,
       },
       {
-        path : 'adminHome',
-        element : <AdminHome/>
+        path: "adminHome",
+        element: <AdminHome />,
       },
-      
+
       {
-        path : 'postContent',
-        element : <PostContent/>
+        path: "postContent",
+        element: <PostContent />,
       },
       {
-        path : 'editProduct/:id',
-        element : <UpdateProduct/>,
+        path: "postProductDetails/:id",
+        element: <PostProductDetails />,
         loader: ({ params }) =>
-        fetch(`http://localhost:2000/postProduct/${params.id}`),
+          fetch(`http://localhost:2000/postProduct/${params.id}`),
       },
       {
-        path : 'manageCoupon',
-        element : <ManageCoupn/>
-      },
-      {
-        path : 'createCoupon/:id',
-        element : <CreateCoupon/>,
+        path: "editProduct/:id",
+        element: <UpdateProduct />,
         loader: ({ params }) =>
-        fetch(`http://localhost:2000/coupon/${params.id}`),
+          fetch(`http://localhost:2000/postProduct/${params.id}`),
+      },
+      {
+        path: "manageCoupon",
+        element: <ManageCoupn />,
+      },
+      {
+        path: "createCoupon/:id",
+        element: <CreateCoupon />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:2000/coupon/${params.id}`),
       },
       {
         path: "allusers",

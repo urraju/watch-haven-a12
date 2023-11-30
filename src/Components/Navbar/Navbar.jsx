@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaCartArrowDown } from "react-icons/fa";
+import { FaBars, FaCartArrowDown } from "react-icons/fa";
 import useAuth from "../../AuthContext/useAuth/useAuth";
 import logo from '../../assets/banner/logo.png'
 import DarkMode from "../DarkMode/DarkMode";
@@ -48,28 +48,7 @@ const Navbar = () => {
   };
   const navbar = (
     <>
-    {/* {
-      user && isAdmin &&  <NavLink
-      className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-      to="/dashboard/adminHome"
-    >
-      Admin Home
-    </NavLink>
-    }
-    { user && !isAdmin &&  <NavLink
-      className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-      to="/dashboard/userHome"
-    >
-      User Home
-    </NavLink>
-
-    }
-      <NavLink to="/dashboard/allusers">
-        <button className="flex gap-2 uppercase text-success">
-          <FaCartArrowDown className="text-xl"/>
-          <div className="badge badge-secondary">+{cart.length}</div>
-        </button>
-      </NavLink> */}
+     
 
       <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
@@ -78,24 +57,14 @@ const Navbar = () => {
         Home
       </NavLink>
       
-      {/* <NavLink
-        className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        to="/dashboard"
-      >
-        DashBoard
-      </NavLink> */}
+      
       <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
         to="/products"
       >
         Products
       </NavLink>
-     {isAdmin ?  <NavLink
-        className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        to="/ourshop"
-      >
-        DashBoard
-      </NavLink> : ''}
+     
       <NavLink
         className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
         to="/login"
@@ -114,26 +83,13 @@ const Navbar = () => {
          <div className="dropdown">
            <label
              tabIndex={0}
-             className="btn text-rose-500 btn-ghost   lg:hidden"
-           >
-             <svg
-               xmlns="http://www.w3.org/2000/svg"
-               className="h-7 w-7"
-               fill="none"
-               viewBox="0 0 24 24"
-               stroke="currentColor"
-             >
-               <path
-                 strokeLinecap="round"
-                 strokeLinejoin="round"
-                 strokeWidth="2"
-                 d="M4 6h16M4 12h8m-8 6h16"
-               />
-             </svg>
+             className="btn text-yellow-500 text-2xl btn-ghost   lg:hidden"
+           > 
+           <FaBars/>
            </label>
            <ul
              tabIndex={0}
-             className="menu menu-sm dropdown-content mt-3 z-[1] p-5 shadow bg-gradient-to-t to-violet-700 from-black w-52 rounded border border-gradient-to-tr  border-gray-600 font-normal uppercase font-roboto gap-5  text-white md:text-white lg:text-white "
+             className="menu menu-sm dropdown-content mt-3 z-[1] p-5 shadow  backdrop-blur bg-black/40   w-52 rounded border border-gradient-to-tr  border-yellow-500 border-opacity-50 font-normal uppercase font-roboto gap-5  text-white md:text-white lg:text-white "
            >
              {navbar}
            </ul>

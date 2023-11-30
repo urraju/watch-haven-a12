@@ -5,6 +5,7 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useForm } from "react-hook-form";
+import HelmetUse from "../shared/HelmetUse";
 const image_hosting_key = import.meta.env.VITE_IMG_HOSTING;
 const imagebb_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const AddProduct = () => {
@@ -58,6 +59,7 @@ const AddProduct = () => {
 
   return (
     <div className="w-full">
+      <HelmetUse helmet={'Add Product'}/>
       <HeadingContent heading={"Product"} subHeading={"Add Product"} />
 
       <div className="flex w-full md:px-20 mt-10  items-center justify-center">
