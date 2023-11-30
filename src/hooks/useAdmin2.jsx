@@ -9,7 +9,7 @@ const useAdmin2 = () => {
   console.log(localStorage.getItem("access-token"));
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:2000/users/admin/${user?.email}`, {
+      fetch(`https://assignmant-12-server.vercel.app/users/admin/${user?.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("access-token")}`,

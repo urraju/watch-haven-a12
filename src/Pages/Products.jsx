@@ -17,7 +17,7 @@ const Products = () => {
   const axiosPublic = useAxiosPublic();
 
   useEffect(() => {
-    fetch("http://localhost:2000/watchCount")
+    fetch("https://assignmant-12-server.vercel.app/watchCount")
       .then((res) => res.json())
       .then((count) => setcount(count.count));
   }, []);

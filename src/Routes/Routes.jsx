@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       {
         path: "details/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/watch/${params.id}`),
+          fetch(`https://assignmant-12-server.vercel.app/watch/${params.id}`),
         element: (
           <PrivateRoute>
             <Details />
@@ -109,13 +109,13 @@ const router = createBrowserRouter([
         path: "postProductDetails/:id",
         element: <PostProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/postProduct/${params.id}`),
+          fetch(`https://assignmant-12-server.vercel.app/postProduct/${params.id}`),
       },
       {
         path: "editProduct/:id",
         element: <UpdateProduct />,
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/postProduct/${params.id}`),
+          fetch(`https://assignmant-12-server.vercel.app/postProduct/${params.id}`),
       },
       {
         path: "manageCoupon",
@@ -125,7 +125,7 @@ const router = createBrowserRouter([
         path: "createCoupon/:id",
         element: <CreateCoupon />,
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/coupon/${params.id}`),
+          fetch(`https://assignmant-12-server.vercel.app/coupon/${params.id}`),
       },
       {
         path: "allusers",

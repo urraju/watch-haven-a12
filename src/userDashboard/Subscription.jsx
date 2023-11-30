@@ -23,7 +23,7 @@ const Subscription = () => {
     queryKey: ["coupon", couponCode],
     queryFn: async () => {
       const res = await axios.get(
-        `http://localhost:2000/getcoupon?code=${couponCode}`
+        `https://assignmant-12-server.vercel.app/getcoupon?code=${couponCode}`
       );
       console.log(res.data);
       if (res?.data[0]?.discount_amount) {
