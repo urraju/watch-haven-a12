@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const ProductCard = ({ data }) => {
-  console.log(Object.keys(data).join(","));
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  });
+  
+ 
   const { _id, product_name, product_image, tags, vote } = data;
   return (
-    <div>
+    <div data-aos="zoom-in-down" >
       <Link to={`/details/${_id}`}>
         <div className="bg-gradient-to-tr relative from-orange-50 to-orange-200  rounded-lg shadow-lg  flex flex-col items-center  h-96">
           <div className="p-5 object-fill ">

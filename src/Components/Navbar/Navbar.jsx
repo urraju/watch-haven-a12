@@ -1,10 +1,11 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaBars, FaCartArrowDown } from "react-icons/fa";
+import { FaBars, } from "react-icons/fa";
 import useAuth from "../../AuthContext/useAuth/useAuth";
 import logo from '../../assets/banner/logo.png'
 import DarkMode from "../DarkMode/DarkMode";
 import userIcon from '../../assets/user/user.png'
 import { useEffect, useState } from "react";
+import { MdDashboard } from "react-icons/md";
  
 const Navbar = () => {
   const [loading , setLoading] = useState(false)
@@ -132,8 +133,8 @@ const Navbar = () => {
            >
              <li>{user ? user.displayName : ""}</li>
              <li>{user ? user.email : ""}</li>
-              {user ? <NavLink to='dashboard'>
-                Dashboard
+              {user ? <NavLink className='uppercase text-cyan-500 flex items-center   border p-1 gap-2 font-kdam rounded border-green-400 border-opacity-40 font-light' to='dashboard/dashboardDisplay'>
+               <MdDashboard className="text-xl text-orange-500"/> Dashboard
               </NavLink> : ''}
              {user ? (
            <button

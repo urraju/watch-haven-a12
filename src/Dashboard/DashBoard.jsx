@@ -18,6 +18,7 @@ import {
 } from "react-icons/md";
 import { AiFillAccountBook, AiFillHome } from "react-icons/ai";
 import HelmetUse from "../shared/HelmetUse";
+import DashBoardDisplay from "./DashBoardDisplay";
 
 const DashBoard = () => {
   const { user } = useAuth();
@@ -196,6 +197,7 @@ const DashBoard = () => {
         </div>
 
         <div className=" md:col-span-8   rounded-lg w-full bg-opacity-20 bg-gradient-to-tl from-sky-100  justify-center flex ">
+          
           <Outlet />
         </div>
       </div>

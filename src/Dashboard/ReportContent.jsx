@@ -44,7 +44,7 @@ const ReportContent = () => {
   return (
     <div className="w-full">
         <HeadingContent heading={'Report'} subHeading={'Report content'}/>
-      <div className="px-20 py-6">
+      <div className="md:px-20 py-6">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}

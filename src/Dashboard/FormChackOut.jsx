@@ -1,8 +1,6 @@
 import Swal from "sweetalert2";
 import {
-  CardCvcElement,
   CardElement,
-  CartElement,
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
@@ -12,6 +10,8 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import { useEffect } from "react";
 import moment from "moment/moment";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 const FormChackOut = ({paymant1}) => {
   const [error, setError] = useState("");
   const [clientSecret, setClientSecret] = useState("");
@@ -22,6 +22,7 @@ const FormChackOut = ({paymant1}) => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const dateTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+   
   
 
   useEffect(() => {
@@ -90,8 +91,27 @@ const FormChackOut = ({paymant1}) => {
           navigate("/dashboard/addProduct");
         }
       });
+        const mapData = users.map(user => user._id === _id)
+        
+      // subcription 
+      axiosSecure.patch(`/users/subscrib/${users._id}`).then((res) => {
+        console.log(res.data);
+        
+        if (res.data?.modifiedCount) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Thanks For paymants",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          navigate("/dashboard/Myprofile");
+        }
+      });
+
     }
   };
+  
   return (
     <div>
       <form onSubmit={handleCheckOut}>

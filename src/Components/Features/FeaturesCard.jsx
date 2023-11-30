@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { FaArrowRight, FaArrowUp, FaVoteYea } from "react-icons/fa";
 import { HiOutlinePlusSm } from "react-icons/hi";
 import useAuth from "../../AuthContext/useAuth/useAuth";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FeaturesCard = ({ data, refetch }) => {
   const axiosPublic = useAxiosPublic();
@@ -11,7 +13,9 @@ const FeaturesCard = ({ data, refetch }) => {
   const { _id, product_name, product_image, vote, tags } = data;
   const [voter, setVoter] = useState(vote);
   const [votes, setVotes] = useState([]);
-
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  });
   useEffect(() => {
     const arr = new Array(voter);
     arr.fill(+1);
@@ -26,7 +30,7 @@ const FeaturesCard = ({ data, refetch }) => {
     });
   };
   return (
-    <div className="p-4">
+    <div data-aos="zoom-in-down" className="p-4">
       <div className="bg-gradient-to-bl relative border rounded-xl from-gray-200  to-yellow-50 justify-between p-4 h-[370px] ">
         <img
           className="w-44   flex-1 object-fill mx-auto"

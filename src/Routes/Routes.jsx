@@ -23,6 +23,7 @@ import UpdateProduct from "../userDashboard/UpdateProduct";
 import ManageCoupn from "../Dashboard/ManageCoupn";
 import CreateCoupon from "../Dashboard/CreateCoupon";
 import PostProductDetails from "../Dashboard/PostProductDetails";
+import DashBoardDisplay from "../Dashboard/DashBoardDisplay";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
       {
         path: "reviewContent",
         element: <ReviewContent />,
+      },
+      {
+        path: "dashboardDisplay",
+        element: <DashBoardDisplay />,
       },
       {
         path: "reportContent",

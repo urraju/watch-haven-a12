@@ -17,4 +17,4 @@ Buying guides to help users make informed decisions about selecting the right wa
 Responsive customer support through various channels, such as live chat, email, or a dedicated helpline, to assist users with queries, concerns, or technical issues.
 Remember to tailor these features to the specific nature and goals of the Watch Haven website to ensure they align with the brand's vision and customer expectations.
 
-- <a className='text-orange-600 uppercase border border-cyan-400 rounded shadow-lg p-3 font-kdam'>Happy Coding</a>
+- <a>Happy Coding</a>

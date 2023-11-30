@@ -1,6 +1,7 @@
-import { MdVerified } from "react-icons/md";
+import { MdPayment, MdVerified } from "react-icons/md";
 import useAuth from "../AuthContext/useAuth/useAuth";
 import HelmetUse from "../shared/HelmetUse";
+import { Link } from "react-router-dom";
 
 const MyProfile = () => {
   const { user } = useAuth();
@@ -20,6 +21,7 @@ const MyProfile = () => {
               <MdVerified className="text-blue-600" />
             </p>
             <a href="">{user.email}</a>
+            <p className="bg-rose-500 px-4 mt-3 font-mono text-sm font-bold uppercase text-gray-200  text-center py-1 rounded"><Link to='/dashboard/subscription' className="flex items-center gap-2 shadow-xl">Subscrib<MdPayment/></Link></p>
           </div>
         </div>
       </div>

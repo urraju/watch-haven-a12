@@ -50,7 +50,7 @@ const MyProducts = () => {
     <div className="w-full">
       <HelmetUse helmet={'My Products'}/>
       <HeadingContent heading={"product"} subHeading={"My products"} />
-      <div className="px-32 mt-10">
+      <div className="md:px-32 md:mt-10">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}

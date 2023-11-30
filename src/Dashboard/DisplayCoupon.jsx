@@ -28,6 +28,7 @@ const DisplayCoupon = () => {
         }}
         modules={[Pagination]}
         className="mySwiper"
+        
       >
         <div className="p-2 grid grid-cols-1  md:p-5xcx ">
           {coupon.map((item) => (

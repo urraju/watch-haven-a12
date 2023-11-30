@@ -26,7 +26,7 @@ const PostContent = () => {
     return(
         <div className="w-full ">
               <HeadingContent heading={'post'} subHeading={'post products'}/>
-             <div className="px-32 py-10">
+             <div className=" md:px-32 md:py-10">
             <div className="overflow-x-auto">
             <table className="table">
             {/* head */}
