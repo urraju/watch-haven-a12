@@ -36,7 +36,7 @@ const DisplayCoupon = () => {
             spaceBetween: 40,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 50,
           },
         }}

@@ -43,7 +43,7 @@ const Login = () => {
                 <label htmlFor="">
                   Email
                   <input
-                    className="block mb-3 outline-none px-3 py-2 rounded mt-2 border w-full"
+                    className="block mb-3 outline-none text-gray-700 px-3 py-2 rounded mt-2 border w-full"
                     type="email"
                     name="email"
                     id=""
@@ -53,7 +53,7 @@ const Login = () => {
                 <label htmlFor="">
                   Confirm Password
                   <input
-                    className="block mb-3 outline-none px-3 py-2 rounded mt-2 border w-full"
+                    className="block mb-3 outline-none text-gray-700 px-3 py-2 rounded mt-2 border w-full"
                     type="password"
                     name="password"
                     id=""
