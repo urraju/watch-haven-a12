@@ -5,7 +5,7 @@
 - The online platforms for watch haven you can purchase products from our site and you can add your favorite products if you want. If you want to add products, you have to pay.
 
 ### Tecnologises :
-- Tailwind, React, React Router, React hook form, DiasyUi, Firebase, MongoDB, ExpressJS, NodeJS,AOS.
+- Tailwind, React, React Router, React hook form, DiasyUi, Firebase, MongoDB, ExpressJS, NodeJS, Axios,TenStack,AOS.
 
 ## Features :
  - 1. Extensive Watch Collection: Watch Haven offers a vast and diverse collection of watches, catering to various styles, brands, and price ranges.
